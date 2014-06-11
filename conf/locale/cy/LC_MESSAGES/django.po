@@ -40,7 +40,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2014-06-12 12:24-0400\n"
+"POT-Creation-Date: 2014-06-18 08:33-0400\n"
 "PO-Revision-Date: 2014-02-06 03:04+0000\n"
 "Last-Translator: Ned Batchelder <ned@edx.org>\n"
 "Language-Team: Welsh (http://www.transifex.com/projects/p/edx-platform/language/cy/)\n"
@@ -361,15 +361,29 @@ msgstr ""
 
 #: common/djangoapps/student/views.py
 msgid ""
-"You are re-using a password that you have used recently. You must have {0} "
-"distinct password(s) before reusing a previous password."
-msgstr ""
+"You are re-using a password that you have used recently. You must have {num}"
+" distinct password before reusing a previous password."
+msgid_plural ""
+"You are re-using a password that you have used recently. You must have {num}"
+" distinct passwords before reusing a previous password."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
+#. Translators: If you need to use a variable number instead of the number
+#. "one", use {num} in its place.
 #: common/djangoapps/student/views.py
 msgid ""
-"You are resetting passwords too frequently. Due to security policies, {0} "
-"day(s) must elapse between password resets"
-msgstr ""
+"You are resetting passwords too frequently. Due to security policies, one "
+"day must elapse between password resets"
+msgid_plural ""
+"You are resetting passwords too frequently. Due to security policies, {num} "
+"days must elapse between password resets"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 #: common/djangoapps/student/views.py
 msgid "Password reset unsuccessful"
@@ -846,8 +860,8 @@ msgstr ""
 
 #: common/lib/capa/capa/inputtypes.py
 msgid ""
-"Your file(s) have been submitted. As soon as your submission is graded, this"
-" message will be replaced with the grader's feedback."
+"Your files have been submitted. As soon as your submission is graded, this "
+"message will be replaced with the grader's feedback."
 msgstr ""
 
 #: common/lib/capa/capa/inputtypes.py
@@ -864,6 +878,26 @@ msgstr ""
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "No response from Xqueue within {xqueue_timeout} seconds. Aborted."
+msgstr ""
+
+#: common/lib/capa/capa/inputtypes.py
+msgid "Cannot connect to the queue"
+msgstr ""
+
+#: common/lib/capa/capa/inputtypes.py common/lib/capa/capa/inputtypes.py
+msgid "No formula specified."
+msgstr ""
+
+#: common/lib/capa/capa/inputtypes.py
+msgid "Couldn't parse formula: {error_msg}"
+msgstr ""
+
+#: common/lib/capa/capa/inputtypes.py common/lib/capa/capa/inputtypes.py
+msgid "Error while rendering preview"
+msgstr ""
+
+#: common/lib/capa/capa/inputtypes.py
+msgid "Sorry, couldn't parse formula"
 msgstr ""
 
 #: common/lib/capa/capa/inputtypes.py
@@ -2841,6 +2875,41 @@ msgstr ""
 msgid "Unable to switch to specified branch. Please check your branch name."
 msgstr ""
 
+#: lms/djangoapps/dashboard/support.py cms/templates/login.html
+#: cms/templates/register.html
+msgid "Email Address"
+msgstr ""
+
+#: lms/djangoapps/dashboard/support.py
+#: lms/templates/sysadmin_dashboard_gitlogs.html
+#: lms/templates/sysadmin_dashboard_gitlogs.html
+msgid "Course ID"
+msgstr ""
+
+#: lms/djangoapps/dashboard/support.py
+msgid "User not found"
+msgstr ""
+
+#: lms/djangoapps/dashboard/support.py
+msgid "Invalid course id"
+msgstr ""
+
+#: lms/djangoapps/dashboard/support.py
+msgid "Course {course_id} not past the refund window."
+msgstr ""
+
+#: lms/djangoapps/dashboard/support.py
+msgid "No order found for {user} in course {course_id}"
+msgstr ""
+
+#: lms/djangoapps/dashboard/support.py
+msgid "Unenrolled {user} from {course_id}"
+msgstr ""
+
+#: lms/djangoapps/dashboard/support.py
+msgid "Refunded {cost} for order id {order_id}"
+msgstr ""
+
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Failed in authenticating {0}, error {1}\n"
 msgstr ""
@@ -2928,7 +2997,7 @@ msgstr ""
 
 #: lms/djangoapps/dashboard/sysadmin.py lms/djangoapps/dashboard/sysadmin.py
 msgid "email"
-msgstr ""
+msgstr "Ebost"
 
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Repair Results"
@@ -2995,6 +3064,8 @@ msgstr ""
 msgid "Directory/ID"
 msgstr ""
 
+#. Translators: "Git Commit" is a computer command; see
+#. http://gitref.org/basic/#commit
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Git Commit"
 msgstr ""
@@ -3118,7 +3189,7 @@ msgstr ""
 #: lms/templates/dashboard.html
 #: lms/templates/courseware/instructor_dashboard.html
 msgid "Email"
-msgstr ""
+msgstr "Ebost"
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "Language"
@@ -4300,6 +4371,51 @@ msgstr ""
 msgid "Skip to this view's content"
 msgstr ""
 
+#: lms/templates/dashboard/_dashboard_refund.html
+#: lms/templates/dashboard/support.html
+msgid "Manual Refund"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "About to refund this order:"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "Order Id:"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "Enrollment:"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "enrolled"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "unenrolled"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "Cost:"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "CertificateItem Status:"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "Order Status:"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "Fulfilled Time:"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "Refund Request Time:"
+msgstr ""
+
 #: lms/templates/registration/password_reset_complete.html
 #: lms/templates/registration/password_reset_complete.html
 msgid "Your Password Reset is Complete"
@@ -4951,7 +5067,6 @@ msgid "Video"
 msgstr ""
 
 #: cms/djangoapps/contentstore/views/component.py
-#: cms/djangoapps/contentstore/views/component.py
 msgid "Blank"
 msgstr ""
 
@@ -5261,7 +5376,7 @@ msgid "):"
 msgstr ""
 
 #: common/templates/course_modes/choose.html
-msgid "Why do I have to pay? What if I don't meet all the requirements?"
+msgid "Why do I have to pay? What if I want a free honor code certificate?"
 msgstr ""
 
 #: common/templates/course_modes/choose.html
@@ -5294,25 +5409,18 @@ msgstr ""
 #: common/templates/course_modes/choose.html
 msgid ""
 "If you can't afford the minimum fee or don't meet the requirements, you can "
-"audit the course or elect to pursue an honor code certificate at no cost. If"
-" you would like to pursue the honor code certificate, please check the honor"
-" code certificate box, tell us why you can't pursue the verified certificate"
-" below, and then click the 'Select Certificate' button to complete your "
-"registration."
-msgstr ""
-
-#: common/templates/course_modes/choose.html
-msgid "Select Honor Code Certificate"
-msgstr ""
-
-#: common/templates/course_modes/choose.html
-msgid "Explain your situation: "
+"audit the course or elect to pursue an honor code certificate at no cost."
 msgstr ""
 
 #: common/templates/course_modes/choose.html
 msgid ""
-"Please write a few sentences about why you'd like to opt out of the paid "
-"verified certificate to pursue the honor code certificate:"
+"If you would like to pursue the honor code certificate, please check the "
+"honor code certificate box and then click the 'Select Certificate' button to"
+" complete your registration."
+msgstr ""
+
+#: common/templates/course_modes/choose.html
+msgid "Select Honor Code Certificate"
 msgstr ""
 
 #: common/templates/course_modes/choose.html
@@ -5374,7 +5482,7 @@ msgstr ""
 #: lms/templates/open_ended_problems/open_ended_problems.html
 #: lms/templates/peer_grading/peer_grading.html
 msgid "Instructions"
-msgstr ""
+msgstr "Cyfarwyddiadau"
 
 #: lms/templates/annotatable.html lms/templates/imageannotation.html
 #: lms/templates/textannotation.html lms/templates/videoannotation.html
@@ -5406,7 +5514,7 @@ msgstr ""
 #: lms/templates/static_templates/contact.html
 #: lms/templates/static_templates/contact.html
 msgid "Contact"
-msgstr ""
+msgstr "Cysylltu"
 
 #: lms/templates/contact.html
 msgid "Class Feedback"
@@ -5470,7 +5578,7 @@ msgstr ""
 
 #: lms/templates/course.html
 msgid "New"
-msgstr ""
+msgstr "Newydd"
 
 #: lms/templates/dashboard.html
 msgid "Dashboard"
@@ -5484,6 +5592,12 @@ msgstr ""
 
 #: lms/templates/dashboard.html
 msgid "Please verify your new email"
+msgstr ""
+
+#: lms/templates/dashboard.html
+msgid ""
+"You'll receive a confirmation in your inbox. Please click the link in the "
+"email to confirm the email change."
 msgstr ""
 
 #. Translators: this message is displayed when a user tries to link their
@@ -5503,7 +5617,7 @@ msgstr ""
 #: lms/templates/dashboard.html lms/templates/dashboard.html
 #: lms/templates/dashboard/_dashboard_info_language.html
 msgid "edit"
-msgstr ""
+msgstr "golygu"
 
 #. Translators: this section lists all the third-party authentication
 #. providers
@@ -5846,7 +5960,7 @@ msgstr ""
 #: lms/templates/register.html lms/templates/signup_modal.html
 #: lms/templates/signup_modal.html
 msgid "E-mail"
-msgstr ""
+msgstr "Ebost"
 
 #: lms/templates/help_modal.html
 msgid "Briefly describe your issue"
@@ -6787,11 +6901,6 @@ msgstr ""
 #: lms/templates/sysadmin_dashboard_gitlogs.html
 #: lms/templates/shoppingcart/verified_cert_receipt.html
 msgid "Date"
-msgstr ""
-
-#: lms/templates/sysadmin_dashboard_gitlogs.html
-#: lms/templates/sysadmin_dashboard_gitlogs.html
-msgid "Course ID"
 msgstr ""
 
 #. Translators: Git is a version-control system; see http://git-scm.com/about
@@ -7785,7 +7894,7 @@ msgstr ""
 
 #: lms/templates/courseware/instructor_dashboard.html
 msgid ""
-"Student distribution per country, all courses, Sep-12 to Oct-17, 1 server "
+"Student distribution per country, all courses, Sep 12 to Oct 17, 1 server "
 "(shown here as an example):"
 msgstr ""
 
@@ -11998,7 +12107,7 @@ msgstr ""
 
 #: cms/templates/import.html
 msgid "Success"
-msgstr ""
+msgstr "Llwyddiant"
 
 #: cms/templates/import.html
 msgid "Your imported content has now been integrated into this course"
@@ -12317,7 +12426,7 @@ msgstr ""
 
 #: cms/templates/index.html
 msgid "Need help?"
-msgstr ""
+msgstr "Angen cymorth?"
 
 #: cms/templates/index.html
 msgid ""
@@ -12340,10 +12449,6 @@ msgstr ""
 
 #: cms/templates/login.html
 msgid "Required Information to Sign In to edX Studio"
-msgstr ""
-
-#: cms/templates/login.html cms/templates/register.html
-msgid "Email Address"
 msgstr ""
 
 #: cms/templates/login.html
@@ -12407,7 +12512,7 @@ msgstr ""
 
 #: cms/templates/manage_users.html
 msgid "Staff"
-msgstr ""
+msgstr "Staff"
 
 #: cms/templates/manage_users.html
 msgid "send an email message to {email}"

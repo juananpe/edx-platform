@@ -26,7 +26,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2014-06-12 12:23-0400\n"
+"POT-Creation-Date: 2014-06-18 08:32-0400\n"
 "PO-Revision-Date: 2014-06-11 15:18+0000\n"
 "Last-Translator: \n"
 "Language-Team: Azerbaijani (http://www.transifex.com/projects/p/edx-platform/language/az/)\n"
@@ -281,7 +281,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/02_html5_video.js
 msgid ""
-"VideoPlayer: Element corresponding to the given selector does not found."
+"VideoPlayer: Element corresponding to the given selector was not found."
 msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/02_html5_video.js
@@ -1536,16 +1536,22 @@ msgid "Unable to retrieve data, please try again later."
 msgstr ""
 
 #: lms/templates/class_dashboard/d3_stacked_bar_graph.js
-msgid "student(s) opened Subsection"
-msgstr ""
+msgid "%(num_students)s student opened Subsection"
+msgid_plural "%(num_students)s students opened Subsection"
+msgstr[0] ""
+msgstr[1] ""
 
 #: lms/templates/class_dashboard/d3_stacked_bar_graph.js
-msgid "students"
-msgstr ""
+msgid "%(num_students)s student"
+msgid_plural "%(num_students)s students"
+msgstr[0] ""
+msgstr[1] ""
 
 #: lms/templates/class_dashboard/d3_stacked_bar_graph.js
-msgid "questions"
-msgstr ""
+msgid "%(num_questions)s question"
+msgid_plural "%(num_questions)s questions"
+msgstr[0] ""
+msgstr[1] ""
 
 #: lms/templates/class_dashboard/d3_stacked_bar_graph.js
 msgid "Number of Students"

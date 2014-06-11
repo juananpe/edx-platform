@@ -26,7 +26,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2014-06-12 12:23-0400\n"
+"POT-Creation-Date: 2014-06-18 08:32-0400\n"
 "PO-Revision-Date: 2014-06-11 15:18+0000\n"
 "Last-Translator: \n"
 "Language-Team: Bulgarian (Bulgaria) (http://www.transifex.com/projects/p/edx-platform/language/bg_BG/)\n"
@@ -69,7 +69,7 @@ msgstr ""
 #: cms/templates/js/course_grade_policy.underscore
 #: cms/templates/js/show-textbook.underscore
 msgid "Delete"
-msgstr ""
+msgstr "Изтрий"
 
 #: common/lib/xmodule/xmodule/js/src/annotatable/display.js
 msgid "Show Annotations"
@@ -281,7 +281,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/02_html5_video.js
 msgid ""
-"VideoPlayer: Element corresponding to the given selector does not found."
+"VideoPlayer: Element corresponding to the given selector was not found."
 msgstr ""
 
 #: common/lib/xmodule/xmodule/js/src/video/02_html5_video.js
@@ -673,7 +673,7 @@ msgstr ""
 
 #: common/static/js/vendor/ova/catch/js/catch.js
 msgid "Annotation"
-msgstr ""
+msgstr "Анотация"
 
 #: common/static/js/vendor/ova/catch/js/catch.js
 msgid "Start"
@@ -712,7 +712,7 @@ msgstr ""
 #: common/static/js/vendor/ova/catch/js/catch.js
 #: common/static/js/vendor/ova/catch/js/catch.js
 msgid "Search"
-msgstr ""
+msgstr "Търсене"
 
 #: common/static/js/vendor/ova/catch/js/catch.js
 #: common/static/js/vendor/ova/catch/js/catch.js
@@ -745,7 +745,7 @@ msgstr ""
 
 #: common/static/js/vendor/ova/catch/js/catch.js
 msgid "Text"
-msgstr ""
+msgstr "Текст"
 
 #: common/static/js/vendor/ova/catch/js/catch.js
 msgid "Video"
@@ -763,7 +763,7 @@ msgstr ""
 #: cms/templates/js/show-textbook.underscore
 #: cms/templates/js/mock/mock-container-page.underscore
 msgid "Edit"
-msgstr ""
+msgstr "Редактирай"
 
 #: common/static/js/vendor/ova/catch/js/catch.js
 msgid "Tags:"
@@ -927,7 +927,7 @@ msgstr ""
 #: lms/static/coffee/src/customwmd.js
 #: cms/templates/js/asset-library.underscore
 msgid "Preview"
-msgstr ""
+msgstr "Прегледай"
 
 #: lms/static/coffee/src/customwmd.js
 msgid "Post body"
@@ -1536,16 +1536,22 @@ msgid "Unable to retrieve data, please try again later."
 msgstr ""
 
 #: lms/templates/class_dashboard/d3_stacked_bar_graph.js
-msgid "student(s) opened Subsection"
-msgstr ""
+msgid "%(num_students)s student opened Subsection"
+msgid_plural "%(num_students)s students opened Subsection"
+msgstr[0] ""
+msgstr[1] ""
 
 #: lms/templates/class_dashboard/d3_stacked_bar_graph.js
-msgid "students"
-msgstr ""
+msgid "%(num_students)s student"
+msgid_plural "%(num_students)s students"
+msgstr[0] ""
+msgstr[1] ""
 
 #: lms/templates/class_dashboard/d3_stacked_bar_graph.js
-msgid "questions"
-msgstr ""
+msgid "%(num_questions)s question"
+msgid_plural "%(num_questions)s questions"
+msgstr[0] ""
+msgstr[1] ""
 
 #: lms/templates/class_dashboard/d3_stacked_bar_graph.js
 msgid "Number of Students"

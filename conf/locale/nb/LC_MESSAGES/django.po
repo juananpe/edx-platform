@@ -71,7 +71,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2014-06-12 12:24-0400\n"
+"POT-Creation-Date: 2014-06-18 08:33-0400\n"
 "PO-Revision-Date: 2014-03-31 22:11+0000\n"
 "Last-Translator: Pål Messenlien <paal@vangenplotz.no>\n"
 "Language-Team: Norwegian Bokmål (http://www.transifex.com/projects/p/edx-platform/language/nb/)\n"
@@ -98,6 +98,8 @@ msgstr ""
 msgid "Discussion"
 msgstr "DIskusjon"
 
+#: cms/djangoapps/contentstore/views/component.py
+#: lms/djangoapps/class_dashboard/dashboard_data.py
 #: lms/templates/courseware/instructor_dashboard.html
 #: lms/templates/courseware/instructor_dashboard.html
 #: lms/templates/instructor/instructor_dashboard_2/analytics.html
@@ -342,7 +344,7 @@ msgstr "Vilkår for bruk må aksepteres"
 
 #: common/djangoapps/student/views.py
 msgid "Agreeing to the Honor Code is required"
-msgstr ""
+msgstr "Godkjenning av Æreskodeks kreves"
 
 #: common/djangoapps/student/views.py
 msgid "A level of education is required"
@@ -404,15 +406,25 @@ msgstr ""
 
 #: common/djangoapps/student/views.py
 msgid ""
-"You are re-using a password that you have used recently. You must have {0} "
-"distinct password(s) before reusing a previous password."
-msgstr ""
+"You are re-using a password that you have used recently. You must have {num}"
+" distinct password before reusing a previous password."
+msgid_plural ""
+"You are re-using a password that you have used recently. You must have {num}"
+" distinct passwords before reusing a previous password."
+msgstr[0] ""
+msgstr[1] ""
 
+#. Translators: If you need to use a variable number instead of the number
+#. "one", use {num} in its place.
 #: common/djangoapps/student/views.py
 msgid ""
-"You are resetting passwords too frequently. Due to security policies, {0} "
-"day(s) must elapse between password resets"
-msgstr ""
+"You are resetting passwords too frequently. Due to security policies, one "
+"day must elapse between password resets"
+msgid_plural ""
+"You are resetting passwords too frequently. Due to security policies, {num} "
+"days must elapse between password resets"
+msgstr[0] ""
+msgstr[1] ""
 
 #: common/djangoapps/student/views.py
 msgid "Password reset unsuccessful"
@@ -889,11 +901,9 @@ msgstr ""
 
 #: common/lib/capa/capa/inputtypes.py
 msgid ""
-"Your file(s) have been submitted. As soon as your submission is graded, this"
-" message will be replaced with the grader's feedback."
+"Your files have been submitted. As soon as your submission is graded, this "
+"message will be replaced with the grader's feedback."
 msgstr ""
-"Din(e) fil(er) er levert. Så snart som innleveringen er rettet, vil denne "
-"meldingen erstattes med relevant tilbakemelding."
 
 #: common/lib/capa/capa/inputtypes.py
 msgid ""
@@ -912,6 +922,26 @@ msgstr ""
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "No response from Xqueue within {xqueue_timeout} seconds. Aborted."
+msgstr ""
+
+#: common/lib/capa/capa/inputtypes.py
+msgid "Cannot connect to the queue"
+msgstr ""
+
+#: common/lib/capa/capa/inputtypes.py common/lib/capa/capa/inputtypes.py
+msgid "No formula specified."
+msgstr ""
+
+#: common/lib/capa/capa/inputtypes.py
+msgid "Couldn't parse formula: {error_msg}"
+msgstr ""
+
+#: common/lib/capa/capa/inputtypes.py common/lib/capa/capa/inputtypes.py
+msgid "Error while rendering preview"
+msgstr ""
+
+#: common/lib/capa/capa/inputtypes.py
+msgid "Sorry, couldn't parse formula"
 msgstr ""
 
 #: common/lib/capa/capa/inputtypes.py
@@ -1000,6 +1030,10 @@ msgstr "Det var et problem med fasitsvaret på denne oppgaven: empty boundary."
 msgid "error"
 msgstr ""
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: Separator used in StringResponse to display multiple answers.
+#. Example: "Answer: Answer_1 or Answer_2 or Answer_3".
+#: common/lib/capa/capa/responsetypes.py
 #: common/templates/course_modes/choose.html
 msgid "or"
 msgstr "eller"
@@ -1176,7 +1210,7 @@ msgstr ""
 msgid "Amount of time after the due date that submissions will be accepted"
 msgstr ""
 
-#: lms/templates/problem.html
+#: common/lib/xmodule/xmodule/capa_base.py lms/templates/problem.html
 msgid "Show Answer"
 msgstr "Vis svar"
 
@@ -1446,6 +1480,8 @@ msgstr ""
 msgid "Which step within the current task that the student is on."
 msgstr ""
 
+#: common/lib/xmodule/xmodule/combined_open_ended_module.py
+#: common/lib/xmodule/xmodule/peer_grading_module.py
 #: lms/templates/peer_grading/peer_grading.html
 msgid "Graded"
 msgstr "Rettet"
@@ -1824,7 +1860,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/html_module.py
 msgid "Editor"
-msgstr ""
+msgstr "Editor"
 
 #: common/lib/xmodule/xmodule/html_module.py
 msgid "Visual"
@@ -2075,6 +2111,11 @@ msgstr ""
 msgid "Warning"
 msgstr ""
 
+#. #-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+#. Translators: This message will be added to the front of messages of type
+#. error,
+#. e.g. "Error: required field is missing".
+#: common/lib/xmodule/xmodule/split_test_module.py
 #: lms/templates/name_changes.html lms/templates/name_changes.html
 #: lms/templates/sysadmin_dashboard_gitlogs.html
 msgid "Error"
@@ -2165,7 +2206,8 @@ msgstr "Fremgang"
 msgid "Wiki"
 msgstr "Wiki"
 
-#: common/lib/xmodule/xmodule/tabs.py
+#: common/lib/xmodule/xmodule/tabs.py cms/templates/textbooks.html
+#: cms/templates/textbooks.html cms/templates/widgets/header.html
 msgid "Textbooks"
 msgstr "Lærebøker"
 
@@ -2759,6 +2801,9 @@ msgstr "Navn"
 #: lms/djangoapps/instructor/views/legacy.py
 #: lms/djangoapps/instructor/views/legacy.py
 #: lms/djangoapps/instructor/views/tools.py
+#: lms/templates/staff_problem_info.html
+#: lms/templates/instructor/instructor_dashboard_2/metrics.html
+#: lms/templates/instructor/instructor_dashboard_2/metrics.html
 msgid "Username"
 msgstr "Brukernavn"
 
@@ -2798,6 +2843,7 @@ msgstr ""
 msgid "Percent of Students"
 msgstr ""
 
+#: lms/djangoapps/class_dashboard/dashboard_data.py
 #: lms/templates/folditchallenge.html
 msgid "Score"
 msgstr "Score"
@@ -2888,6 +2934,41 @@ msgstr ""
 #. doesn't exist, or there is a problem changing to it.
 #: lms/djangoapps/dashboard/git_import.py
 msgid "Unable to switch to specified branch. Please check your branch name."
+msgstr ""
+
+#: lms/djangoapps/dashboard/support.py cms/templates/login.html
+#: cms/templates/register.html
+msgid "Email Address"
+msgstr ""
+
+#: lms/djangoapps/dashboard/support.py
+#: lms/templates/sysadmin_dashboard_gitlogs.html
+#: lms/templates/sysadmin_dashboard_gitlogs.html
+msgid "Course ID"
+msgstr "Kurs-ID"
+
+#: lms/djangoapps/dashboard/support.py
+msgid "User not found"
+msgstr ""
+
+#: lms/djangoapps/dashboard/support.py
+msgid "Invalid course id"
+msgstr ""
+
+#: lms/djangoapps/dashboard/support.py
+msgid "Course {course_id} not past the refund window."
+msgstr ""
+
+#: lms/djangoapps/dashboard/support.py
+msgid "No order found for {user} in course {course_id}"
+msgstr ""
+
+#: lms/djangoapps/dashboard/support.py
+msgid "Unenrolled {user} from {course_id}"
+msgstr ""
+
+#: lms/djangoapps/dashboard/support.py
+msgid "Refunded {cost} for order id {order_id}"
 msgstr ""
 
 #: lms/djangoapps/dashboard/sysadmin.py
@@ -3041,6 +3122,7 @@ msgid "Loaded course {0} {1}<br/>Errors:"
 msgstr "Loaded course {0} {1}<br/>Errors:"
 
 #: lms/djangoapps/dashboard/sysadmin.py lms/djangoapps/dashboard/sysadmin.py
+#: cms/templates/index.html cms/templates/settings.html
 msgid "Course Name"
 msgstr "Kursnavn"
 
@@ -3048,6 +3130,8 @@ msgstr "Kursnavn"
 msgid "Directory/ID"
 msgstr "Directory/ID"
 
+#. Translators: "Git Commit" is a computer command; see
+#. http://gitref.org/basic/#commit
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Git Commit"
 msgstr "Git Commit"
@@ -3179,7 +3263,7 @@ msgstr "Språk"
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "Location"
-msgstr ""
+msgstr "Sted"
 
 #: lms/djangoapps/instructor/views/api.py
 msgid "Birth Year"
@@ -3979,7 +4063,7 @@ msgstr "Kurs"
 msgid "Course Announce Date"
 msgstr "Dato for kursannonsering"
 
-#: lms/djangoapps/shoppingcart/reports.py
+#: lms/djangoapps/shoppingcart/reports.py cms/templates/settings.html
 msgid "Course Start Date"
 msgstr "Kursets startdato"
 
@@ -4493,6 +4577,51 @@ msgstr "Ingen pris valgt eller pris valgt er lavere enn minimum."
 msgid "Skip to this view's content"
 msgstr "Skip to this view's content"
 
+#: lms/templates/dashboard/_dashboard_refund.html
+#: lms/templates/dashboard/support.html
+msgid "Manual Refund"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "About to refund this order:"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "Order Id:"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "Enrollment:"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "enrolled"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "unenrolled"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "Cost:"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "CertificateItem Status:"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "Order Status:"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "Fulfilled Time:"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "Refund Request Time:"
+msgstr ""
+
 #: lms/templates/registration/password_reset_complete.html
 #: lms/templates/registration/password_reset_complete.html
 msgid "Your Password Reset is Complete"
@@ -4752,7 +4881,7 @@ msgstr "Endre"
 msgid "Save changes"
 msgstr "Lagre endringer"
 
-#: lms/templates/wiki/edit.html
+#: lms/templates/wiki/edit.html cms/templates/unit.html
 msgid "Preview"
 msgstr "Forhåndsvis"
 
@@ -5207,13 +5336,12 @@ msgstr "Opplasting fullført"
 
 #: cms/djangoapps/contentstore/views/component.py
 msgid "HTML"
-msgstr ""
+msgstr "HTML"
 
 #: cms/djangoapps/contentstore/views/component.py
 msgid "Video"
 msgstr ""
 
-#: cms/djangoapps/contentstore/views/component.py
 #: cms/djangoapps/contentstore/views/component.py
 msgid "Blank"
 msgstr ""
@@ -5533,7 +5661,7 @@ msgid "):"
 msgstr "):"
 
 #: common/templates/course_modes/choose.html
-msgid "Why do I have to pay? What if I don't meet all the requirements?"
+msgid "Why do I have to pay? What if I want a free honor code certificate?"
 msgstr ""
 
 #: common/templates/course_modes/choose.html
@@ -5566,25 +5694,18 @@ msgstr ""
 #: common/templates/course_modes/choose.html
 msgid ""
 "If you can't afford the minimum fee or don't meet the requirements, you can "
-"audit the course or elect to pursue an honor code certificate at no cost. If"
-" you would like to pursue the honor code certificate, please check the honor"
-" code certificate box, tell us why you can't pursue the verified certificate"
-" below, and then click the 'Select Certificate' button to complete your "
-"registration."
-msgstr ""
-
-#: common/templates/course_modes/choose.html
-msgid "Select Honor Code Certificate"
-msgstr ""
-
-#: common/templates/course_modes/choose.html
-msgid "Explain your situation: "
+"audit the course or elect to pursue an honor code certificate at no cost."
 msgstr ""
 
 #: common/templates/course_modes/choose.html
 msgid ""
-"Please write a few sentences about why you'd like to opt out of the paid "
-"verified certificate to pursue the honor code certificate:"
+"If you would like to pursue the honor code certificate, please check the "
+"honor code certificate box and then click the 'Select Certificate' button to"
+" complete your registration."
+msgstr ""
+
+#: common/templates/course_modes/choose.html
+msgid "Select Honor Code Certificate"
 msgstr ""
 
 #: common/templates/course_modes/choose.html
@@ -5636,7 +5757,7 @@ msgstr ""
 
 #: lms/templates/admin_dashboard.html
 msgid "{platform_name}-wide Summary"
-msgstr ""
+msgstr "{platform_name}-omfattende sammendrag"
 
 #: lms/templates/annotatable.html lms/templates/imageannotation.html
 #: lms/templates/textannotation.html lms/templates/videoannotation.html
@@ -5651,11 +5772,11 @@ msgstr "Instruksjoner"
 #: lms/templates/annotatable.html lms/templates/imageannotation.html
 #: lms/templates/textannotation.html lms/templates/videoannotation.html
 msgid "Collapse Instructions"
-msgstr ""
+msgstr "Skjul instruksjoner"
 
 #: lms/templates/annotatable.html
 msgid "Guided Discussion"
-msgstr ""
+msgstr "Veiledet diskusjon"
 
 #: lms/templates/annotatable.html
 msgid "Hide Annotations"
@@ -5762,6 +5883,12 @@ msgstr ""
 
 #: lms/templates/dashboard.html
 msgid "Please verify your new email"
+msgstr "Vennligst verifiser din nye e-post"
+
+#: lms/templates/dashboard.html
+msgid ""
+"You'll receive a confirmation in your inbox. Please click the link in the "
+"email to confirm the email change."
 msgstr ""
 
 #. Translators: this message is displayed when a user tries to link their
@@ -5932,7 +6059,7 @@ msgstr "Vi var ikke i stand til å sende e-post med bekreftelse til {email}"
 #: lms/templates/email_change_failed.html lms/templates/email_exists.html
 #: lms/templates/invalid_email_key.html
 msgid "Go back to the {link_start}home page{link_end}."
-msgstr ""
+msgstr "Gå tilbake til {link_start}home page{link_end}."
 
 #: lms/templates/email_change_successful.html
 #: lms/templates/emails_change_successful.html
@@ -5962,7 +6089,7 @@ msgstr "Legg til nye studenter"
 
 #: lms/templates/enroll_students.html
 msgid "Existing students:"
-msgstr ""
+msgstr "Eksisterende studenter:"
 
 #: lms/templates/enroll_students.html
 msgid "New students added: "
@@ -5982,7 +6109,7 @@ msgstr "Ekstern autentisering feilet"
 
 #: lms/templates/folditbasic.html
 msgid "Due:"
-msgstr ""
+msgstr "Frist:"
 
 #: lms/templates/folditbasic.html
 msgid "Status:"
@@ -6043,6 +6170,11 @@ msgid ""
 "{platform_name}'s free online MOOCs are interactive and subjects include "
 "computer science, public health, and artificial intelligence."
 msgstr ""
+"{platform_name} er en ideell organisasjon grunnlagt i partnerskap mellom "
+"{Harvard} og {MIT} hvis misjon er å bringe det beste av høyere utdanning til"
+" studenter i alle aldre hvor som helst i verden, hvor enn det er tilgang til"
+" internett. {platform_name}s åpne online MOOCs er interaktive, og temaer "
+"inkluderer informatikk, offentlig helse og kunstig intelligens. "
 
 #: lms/templates/footer.html
 msgid "&copy; 2014 {platform_name}, some rights reserved."
@@ -6055,13 +6187,15 @@ msgstr "Vilkår for tjenesten og Æreskodeks"
 #: lms/templates/forgot_password_modal.html
 #: lms/templates/forgot_password_modal.html
 msgid "Password Reset"
-msgstr ""
+msgstr "Nullstill passord"
 
 #: lms/templates/forgot_password_modal.html
 msgid ""
 "Please enter your e-mail address below, and we will e-mail instructions for "
 "setting a new password."
 msgstr ""
+"Vennligst skriv inn din e-postadresse nedenfor, og vi vil sende "
+"instruksjoner for å sette nytt passord."
 
 #: lms/templates/forgot_password_modal.html
 msgid "Your E-mail Address"
@@ -6073,7 +6207,7 @@ msgstr ""
 
 #: lms/templates/forgot_password_modal.html
 msgid "Reset My Password"
-msgstr ""
+msgstr "Nullstill mitt passord"
 
 #: lms/templates/forgot_password_modal.html
 msgid "Email is incorrect."
@@ -6194,7 +6328,7 @@ msgstr "forslag"
 
 #: lms/templates/help_modal.html
 msgid "Make a Suggestion"
-msgstr ""
+msgstr "Kom med et forslag"
 
 #: lms/templates/help_modal.html
 msgid "Brief description of your suggestion"
@@ -6313,7 +6447,7 @@ msgstr "Logg på min {platform_name}-konto"
 
 #: lms/templates/login.html
 msgid "Access My Courses"
-msgstr ""
+msgstr "Gå til mine kurs"
 
 #: lms/templates/login.html lms/templates/register.html
 msgid "Processing your account information…"
@@ -6325,11 +6459,11 @@ msgstr "Vennligst logg inn"
 
 #: lms/templates/login.html
 msgid "to access your account and courses"
-msgstr ""
+msgstr "for å få tilgang til din konto og kurs"
 
 #: lms/templates/login.html
 msgid "We're Sorry, {platform_name} accounts are unavailable currently"
-msgstr ""
+msgstr "Vi beklager, {platform_name}-kontoer er utilgjengelige for øyeblikket"
 
 #: lms/templates/login.html
 msgid "The following errors occurred while logging you in:"
@@ -6423,7 +6557,7 @@ msgstr "Deaktiver konto"
 
 #: lms/templates/manage_user_standing.html
 msgid "Reenable Account"
-msgstr ""
+msgstr "Reaktiver konto"
 
 #: lms/templates/manage_user_standing.html
 msgid "Students whose accounts have been disabled"
@@ -6497,11 +6631,11 @@ msgstr "Finn kurs"
 
 #: lms/templates/navigation.html
 msgid "Dashboard for:"
-msgstr ""
+msgstr "Dashbord for:"
 
 #: lms/templates/navigation.html
 msgid "More options dropdown"
-msgstr ""
+msgstr "Flere alternativer dropdown"
 
 #: lms/templates/navigation.html
 msgid "Log Out"
@@ -6513,7 +6647,7 @@ msgstr ""
 
 #: lms/templates/navigation.html
 msgid "How it Works"
-msgstr ""
+msgstr "Slik fungerer det"
 
 #: lms/templates/navigation.html lms/templates/sysadmin_dashboard.html
 #: lms/templates/sysadmin_dashboard_gitlogs.html
@@ -6614,12 +6748,12 @@ msgstr "Skriv inn et offentlig brukernavn:"
 #: lms/templates/register-shib.html lms/templates/register.html
 #: lms/templates/register.html
 msgid "example: JaneDoe"
-msgstr ""
+msgstr "eksempel: JaneDoe"
 
 #: lms/templates/register-shib.html lms/templates/register.html
 #: lms/templates/register.html
 msgid "Will be shown in any discussions or forums you participate in"
-msgstr ""
+msgstr "Vil bli vist i diskusjoner eller forum du deltar i"
 
 #: lms/templates/register-shib.html lms/templates/register.html
 msgid "Account Acknowledgements"
@@ -6628,12 +6762,12 @@ msgstr ""
 #: lms/templates/register-shib.html lms/templates/register.html
 #: lms/templates/signup_modal.html
 msgid "I agree to the {link_start}Terms of Service{link_end}"
-msgstr ""
+msgstr "Jeg godtar {link_start}Terms of Service{link_end}"
 
 #: lms/templates/register-shib.html lms/templates/register.html
 #: lms/templates/signup_modal.html
 msgid "I agree to the {link_start}Honor Code{link_end}"
-msgstr ""
+msgstr "Jeg godtar {link_start}Honor Code{link_end}"
 
 #: lms/templates/register-shib.html
 msgid "Update My Account"
@@ -6684,7 +6818,7 @@ msgstr ""
 
 #: lms/templates/register-sidebar.html
 msgid "Need help in registering with {platform_name}?"
-msgstr ""
+msgstr "Trenger du hjelp til å registrere deg hos {platform_name}?"
 
 #: lms/templates/register-sidebar.html
 msgid "View our FAQs for answers to commonly asked questions."
@@ -6698,7 +6832,7 @@ msgstr ""
 
 #: lms/templates/register.html
 msgid "Register for {platform_name}"
-msgstr ""
+msgstr "Registrer deg på {platform_name}"
 
 #: lms/templates/register.html
 msgid "Create My {platform_name} Account"
@@ -6742,7 +6876,7 @@ msgstr ""
 
 #: lms/templates/register.html lms/templates/verify_student/face_upload.html
 msgid "example: Jane Doe"
-msgstr ""
+msgstr "eksempel: Jane Doe"
 
 #: lms/templates/register.html lms/templates/register.html
 msgid "Needed for any certificates you may earn"
@@ -6787,7 +6921,7 @@ msgstr "Fødselsår"
 
 #: lms/templates/register.html
 msgid "Please share with us your reasons for registering with {platform_name}"
-msgstr ""
+msgstr "Vennligst del dine grunner til å registrere deg hos {platform_name}"
 
 #: lms/templates/register.html
 msgid "Register"
@@ -6814,7 +6948,7 @@ msgstr "Forrige"
 
 #: lms/templates/seq_module.html lms/templates/seq_module.html
 msgid "Section Navigation"
-msgstr ""
+msgstr "Seksjonsnavigasjon"
 
 #: lms/templates/seq_module.html lms/templates/seq_module.html
 #: lms/templates/discussion/mustache/_pagination.mustache
@@ -6827,11 +6961,11 @@ msgstr ""
 
 #: lms/templates/signup_modal.html lms/templates/signup_modal.html
 msgid "e.g. yourname@domain.com"
-msgstr ""
+msgstr "f.eks. yourname@domain.com"
 
 #: lms/templates/signup_modal.html lms/templates/signup_modal.html
 msgid "e.g. yourname (shown on forums)"
-msgstr ""
+msgstr "f.eks. dittnavn (vises på forum)"
 
 #: lms/templates/signup_modal.html lms/templates/signup_modal.html
 msgid "e.g. Your Name (for certificates)"
@@ -6847,7 +6981,7 @@ msgstr "Fullt navn *"
 
 #: lms/templates/signup_modal.html
 msgid "Ed. Completed"
-msgstr ""
+msgstr "Utd. fullført"
 
 #: lms/templates/signup_modal.html
 msgid "Year of birth"
@@ -6885,7 +7019,7 @@ msgstr ""
 
 #: lms/templates/staff_problem_info.html
 msgid "Submission history"
-msgstr ""
+msgstr "Innleveringshistorikk"
 
 #: lms/templates/staff_problem_info.html
 msgid "{platform_name} Content Quality Assessment"
@@ -6893,11 +7027,11 @@ msgstr ""
 
 #: lms/templates/staff_problem_info.html
 msgid "Comment"
-msgstr ""
+msgstr "Kommentar"
 
 #: lms/templates/staff_problem_info.html
 msgid "comment"
-msgstr ""
+msgstr "kommentar"
 
 #: lms/templates/staff_problem_info.html
 msgid "Tag"
@@ -6995,7 +7129,7 @@ msgstr ""
 #: lms/templates/sysadmin_dashboard_gitlogs.html
 #: lms/templates/sysadmin_dashboard_gitlogs.html
 msgid "Git Logs"
-msgstr ""
+msgstr "Git-logger"
 
 #: lms/templates/sysadmin_dashboard.html
 msgid "User Management"
@@ -7015,7 +7149,7 @@ msgstr "Opprett bruker"
 
 #: lms/templates/sysadmin_dashboard.html
 msgid "Download list of all users (csv file)"
-msgstr ""
+msgstr "Last ned liste over alle brukere (csv.fil)"
 
 #: lms/templates/sysadmin_dashboard.html
 msgid "Check and repair external authentication map"
@@ -7076,11 +7210,6 @@ msgstr "Platformversjon"
 #: lms/templates/shoppingcart/verified_cert_receipt.html
 msgid "Date"
 msgstr "Dato"
-
-#: lms/templates/sysadmin_dashboard_gitlogs.html
-#: lms/templates/sysadmin_dashboard_gitlogs.html
-msgid "Course ID"
-msgstr "Kurs-ID"
 
 #. Translators: Git is a version-control system; see http://git-scm.com/about
 #: lms/templates/sysadmin_dashboard_gitlogs.html
@@ -7171,7 +7300,7 @@ msgstr ""
 
 #: lms/templates/video.html
 msgid "Video position"
-msgstr ""
+msgstr "Video plassering"
 
 #: lms/templates/video.html
 msgid "Play"
@@ -7317,7 +7446,7 @@ msgstr "Svar på feedback"
 #: lms/templates/combinedopenended/open_ended_result_table.html
 #: lms/templates/combinedopenended/openended/open_ended_evaluation.html
 msgid "How accurate do you find this feedback?"
-msgstr ""
+msgstr "Hvor presis er tilbakemeldingen?"
 
 #: lms/templates/combinedopenended/open_ended_result_table.html
 #: lms/templates/combinedopenended/openended/open_ended_evaluation.html
@@ -7430,12 +7559,12 @@ msgstr "Legg til kohortmedlemmer"
 
 #: lms/templates/courseware/accordion.html
 msgid "{chapter}, current chapter"
-msgstr ""
+msgstr "{chapter}, gjeldende kapittel"
 
 #: lms/templates/courseware/accordion.html
 #: lms/templates/courseware/progress.html
 msgid "due {date}"
-msgstr ""
+msgstr "Forfallsdato {date}"
 
 #: lms/templates/courseware/course_about.html
 msgid ""
@@ -7514,7 +7643,7 @@ msgstr "Forkunnskaper"
 
 #: lms/templates/courseware/course_about.html
 msgid "Additional Resources"
-msgstr ""
+msgstr "Ytterligere ressurser"
 
 #. Translators: 'needs attention' is an alternative string for the
 #. notification image that indicates the tab "needs attention".
@@ -7552,7 +7681,7 @@ msgstr ""
 
 #: lms/templates/courseware/courseware.html
 msgid "Return to Exam"
-msgstr ""
+msgstr "Tilbake til eksamen"
 
 #: lms/templates/courseware/courseware.html
 msgid "Course Navigation"
@@ -7602,7 +7731,7 @@ msgstr ""
 
 #: lms/templates/courseware/courseware.html
 msgid "Operators"
-msgstr ""
+msgstr "Operatorer"
 
 #: lms/templates/courseware/courseware.html
 msgid "parallel resistors function"
@@ -7622,7 +7751,7 @@ msgstr "Eulers tall"
 
 #: lms/templates/courseware/courseware.html
 msgid "ratio of a circle's circumference to it's diameter"
-msgstr ""
+msgstr "forhold mellom en sirkels omkrets til dens diameter"
 
 #: lms/templates/courseware/courseware.html
 msgid "Boltzmann constant"
@@ -7893,7 +8022,7 @@ msgstr ""
 #: lms/templates/courseware/instructor_dashboard.html
 #: lms/templates/courseware/instructor_dashboard.html
 msgid "Section:"
-msgstr ""
+msgstr "Seksjon:"
 
 #: lms/templates/courseware/instructor_dashboard.html
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
@@ -7935,21 +8064,21 @@ msgstr "Send til:"
 #: lms/templates/courseware/instructor_dashboard.html
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html
 msgid "Myself"
-msgstr ""
+msgstr "Meg selv"
 
 #: lms/templates/courseware/instructor_dashboard.html
 #: lms/templates/courseware/instructor_dashboard.html
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html
 msgid "Staff and instructors"
-msgstr ""
+msgstr "Stab og instruktører"
 
 #: lms/templates/courseware/instructor_dashboard.html
 #: lms/templates/courseware/instructor_dashboard.html
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html
 msgid "All (students, staff and instructors)"
-msgstr ""
+msgstr "Alle (studenter, stab og instruktører)"
 
 #: lms/templates/courseware/instructor_dashboard.html
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html
@@ -8071,7 +8200,7 @@ msgstr "Antall studenter"
 
 #: lms/templates/courseware/instructor_dashboard.html
 msgid ""
-"Student distribution per country, all courses, Sep-12 to Oct-17, 1 server "
+"Student distribution per country, all courses, Sep 12 to Oct 17, 1 server "
 "(shown here as an example):"
 msgstr ""
 
@@ -8105,7 +8234,7 @@ msgstr ""
 
 #: lms/templates/courseware/instructor_dashboard.html
 msgid "Duration (sec)"
-msgstr ""
+msgstr "Varighet (sek)"
 
 #: lms/templates/courseware/instructor_dashboard.html
 msgid "Task Progress"
@@ -8154,7 +8283,7 @@ msgstr "Nyheter - MITx 6.002x"
 
 #: lms/templates/courseware/news.html
 msgid "Updates to Discussion Posts You Follow"
-msgstr ""
+msgstr "Oppdateringer av diskusjonsinnlegg du følger"
 
 #: lms/templates/courseware/progress.html
 msgid "{course_number} Progress"
@@ -8162,7 +8291,7 @@ msgstr "{course_number} Fremgang"
 
 #: lms/templates/courseware/progress.html
 msgid "Course Progress"
-msgstr ""
+msgstr "Kursfremgang"
 
 #: lms/templates/courseware/progress.html
 msgid "View Grading in studio"
@@ -8194,7 +8323,7 @@ msgstr ""
 
 #: lms/templates/courseware/syllabus.html
 msgid "{course.display_number_with_default} Course Info"
-msgstr ""
+msgstr "{course.display_number_with_default} Kursinfo"
 
 #: lms/templates/courseware/welcome-back.html
 msgid ""
@@ -8319,7 +8448,7 @@ msgstr "Kurs startet - {start_date}"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Course has not yet started"
-msgstr ""
+msgstr "Kurset har ennå ikke startet"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Course Starts - {start_date}"
@@ -8331,7 +8460,7 @@ msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Challenge Yourself!"
-msgstr ""
+msgstr "Utfordre deg selv!"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html
 msgid "Take this course as an ID-verified student."
@@ -8474,6 +8603,7 @@ msgid ""
 "Sorry! We can't find anything matching your search. Please try another "
 "search."
 msgstr ""
+"Beklager! Vi kunne ikke finne noe som matcher ditt søk. Prøv et nytt søk. "
 
 #: lms/templates/discussion/_blank_slate.html
 msgid "There are no posts here yet. Be the first one to post!"
@@ -8508,7 +8638,7 @@ msgstr "Vis alle diskusjoner"
 
 #: lms/templates/discussion/_filter_dropdown.html
 msgid "Show Flagged Discussions"
-msgstr ""
+msgstr "Vis flaggede diskusjoner"
 
 #: lms/templates/discussion/_filter_dropdown.html
 msgid "Posts I'm Following"
@@ -8546,7 +8676,7 @@ msgstr "Gjør synlig for:"
 
 #: lms/templates/discussion/_inline_new_post.html
 msgid "My Cohort"
-msgstr ""
+msgstr "Min kohort"
 
 #: lms/templates/discussion/_inline_new_post.html
 #: lms/templates/discussion/_new_post.html
@@ -8832,8 +8962,8 @@ msgstr[1] ""
 #: lms/templates/discussion/_user_profile.html
 msgid "%s comment"
 msgid_plural "%s comments"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%s kommentar"
+msgstr[1] "%s kommentarer"
 
 #: lms/templates/discussion/index.html
 #: lms/templates/discussion/user_profile.html
@@ -9256,7 +9386,7 @@ msgstr "Nei"
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Has the course ended?"
-msgstr ""
+msgstr "Er kurset avsluttet?"
 
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Grade Cutoffs:"
@@ -9586,7 +9716,7 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Instructors"
-msgstr ""
+msgstr "Instruktører"
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid ""
@@ -9596,7 +9726,7 @@ msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Add Instructor"
-msgstr ""
+msgstr "Legg til instruktør"
 
 #: lms/templates/instructor/instructor_dashboard_2/membership.html
 msgid "Beta Testers"
@@ -9777,7 +9907,7 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Student Email or Username"
-msgstr ""
+msgstr "Student-e-post eller brukernavn"
 
 #: lms/templates/instructor/instructor_dashboard_2/student_admin.html
 msgid "Click this link to view the student's progress page:"
@@ -9911,7 +10041,7 @@ msgstr ""
 
 #: lms/templates/open_ended_problems/open_ended_flagged_problems.html
 msgid "Ban"
-msgstr ""
+msgstr "Ban"
 
 #: lms/templates/open_ended_problems/open_ended_problems.html
 msgid "{course_number} Open Ended Problems"
@@ -9964,7 +10094,7 @@ msgstr ""
 
 #: lms/templates/peer_grading/peer_grading.html
 msgid "Due date"
-msgstr ""
+msgstr "Forfallsdato"
 
 #: lms/templates/peer_grading/peer_grading.html
 msgid "Available"
@@ -9976,7 +10106,7 @@ msgstr "Påkrevd"
 
 #: lms/templates/peer_grading/peer_grading.html
 msgid "No due date"
-msgstr ""
+msgstr "Ingen forfallsdato"
 
 #: lms/templates/peer_grading/peer_grading_closed.html
 msgid ""
@@ -9994,7 +10124,7 @@ msgstr ""
 
 #: lms/templates/peer_grading/peer_grading_problem.html
 msgid "Please include some written feedback as well."
-msgstr ""
+msgstr "Vennligst inkluder skriftlig tilbakemelding"
 
 #: lms/templates/peer_grading/peer_grading_problem.html
 msgid ""
@@ -10094,7 +10224,7 @@ msgstr "Kontoen er allerede aktiv!"
 
 #: lms/templates/registration/activation_complete.html
 msgid "You can now {link_start}log in{link_end}."
-msgstr ""
+msgstr "Du kan nå {link_start}log in{link_end}."
 
 #: lms/templates/registration/activation_invalid.html
 msgid "Activation Invalid"
@@ -10112,7 +10242,7 @@ msgstr ""
 
 #: lms/templates/registration/activation_invalid.html
 msgid "Or you can go back to the {link_start}home page{link_end}."
-msgstr ""
+msgstr "Eller du kan gå tilbake til {link_start}home page{link_end}."
 
 #: lms/templates/registration/password_reset_done.html
 msgid "Password reset successful"
@@ -10244,7 +10374,7 @@ msgstr ""
 
 #: lms/templates/shoppingcart/verified_cert_receipt.html
 msgid "You are now registered for: "
-msgstr ""
+msgstr "Du er nå registrert på:"
 
 #: lms/templates/shoppingcart/verified_cert_receipt.html
 msgid "Registered as: "
@@ -10286,7 +10416,7 @@ msgstr ""
 #: lms/templates/verify_student/photo_verification.html
 #: lms/templates/verify_student/show_requirements.html
 msgid "Take Photo"
-msgstr ""
+msgstr "Ta bilde"
 
 #: lms/templates/shoppingcart/verified_cert_receipt.html
 #: lms/templates/verify_student/photo_verification.html
@@ -10331,7 +10461,7 @@ msgstr ""
 
 #: lms/templates/shoppingcart/verified_cert_receipt.html
 msgid "You are registered for:"
-msgstr ""
+msgstr "Du er nå registrert på:"
 
 #: lms/templates/shoppingcart/verified_cert_receipt.html
 msgid "A list of courses you have just registered for as a verified student"
@@ -10339,7 +10469,7 @@ msgstr ""
 
 #: lms/templates/shoppingcart/verified_cert_receipt.html
 msgid "Options"
-msgstr ""
+msgstr "Alternativer"
 
 #: lms/templates/shoppingcart/verified_cert_receipt.html
 msgid "Starts: {start_date}"
@@ -10471,7 +10601,7 @@ msgstr ""
 
 #: lms/templates/verify_student/_modal_editname.html
 msgid "Edit Your Name"
-msgstr ""
+msgstr "Rediger ditt navn"
 
 #: lms/templates/verify_student/_modal_editname.html
 #: lms/templates/verify_student/face_upload.html
@@ -10514,7 +10644,7 @@ msgstr ""
 #: lms/templates/verify_student/_reverification_support.html
 #: lms/templates/verify_student/_verification_support.html
 msgid "Have questions?"
-msgstr ""
+msgstr "Spørsmål?"
 
 #: lms/templates/verify_student/_reverification_support.html
 #: lms/templates/verify_student/_verification_support.html
@@ -10578,7 +10708,7 @@ msgstr ""
 
 #: lms/templates/verify_student/face_upload.html
 msgid "Edit Your Full Name"
-msgstr ""
+msgstr "Rediger ditt fulle navn"
 
 #: lms/templates/verify_student/midcourse_photo_reverification.html
 msgid "Re-Verify"
@@ -11258,6 +11388,8 @@ msgid ""
 "you need an active edX account before registering - check your email for "
 "instructions"
 msgstr ""
+"du trenger en aktiv edX-onto før registrering - sjekk din e-post for "
+"instruksjoner"
 
 #: lms/templates/verify_student/show_requirements.html
 msgid "Identification"
@@ -11360,70 +11492,79 @@ msgstr ""
 
 #: cms/templates/404.html
 msgid "The page that you were looking for was not found."
-msgstr ""
+msgstr "Siden du så etter finnes ikke."
 
 #: cms/templates/404.html
 msgid ""
 "Go back to the {homepage} or let us know about any pages that may have been "
 "moved at {email}."
 msgstr ""
+"Gå tilbake til {homepage} eller la oss vite om noen sider kan ha blitt "
+"flyttet {email}."
 
 #: cms/templates/500.html
 msgid "Studio Server Error"
-msgstr ""
+msgstr "Studio server feil!"
 
 #: cms/templates/500.html
 msgid "The <em>Studio</em> servers encountered an error"
-msgstr ""
+msgstr "Det har oppstått en feil på <em>Studio</em> serverene"
 
 #: cms/templates/500.html
 msgid ""
 "An error occurred in Studio and the page could not be loaded. Please try "
 "again in a few moments."
 msgstr ""
+"En feil oppsto i Studio og siden kunne likke vises. Vennligst prøv igjen "
+"litt senere."
 
 #: cms/templates/500.html
 msgid ""
 "We've logged the error and our staff is currently working to resolve this "
 "error as soon as possible."
 msgstr ""
+"Vi har logget en feil og vårt server personell arbeider med å finne feilen."
 
 #: cms/templates/500.html
 msgid "If the problem persists, please email us at {email_link}."
-msgstr ""
+msgstr "Om problemet fortsetter, vennligst send oss en epost {email_link}."
 
 #: cms/templates/activation_active.html cms/templates/activation_complete.html
 #: cms/templates/activation_invalid.html
 msgid "Studio Account Activation"
-msgstr ""
+msgstr "Studio Konto Aktivering"
 
 #: cms/templates/activation_active.html
 msgid "Your account is already active"
-msgstr ""
+msgstr "Din konto er allerede aktivert"
 
 #: cms/templates/activation_active.html
 msgid ""
 "This account, set up using {0}, has already been activated. Please sign in "
 "to start working within edX Studio."
 msgstr ""
+"Denne kontoen ble satt opp med {0}, den er allerede aktivert. Vennligst logg"
+" på og start å jobbe inne i edX Studio."
 
 #: cms/templates/activation_active.html cms/templates/activation_complete.html
 msgid "Sign into Studio"
-msgstr ""
+msgstr "Logg inn i Studio"
 
 #: cms/templates/activation_complete.html
 msgid "Your account activation is complete!"
-msgstr ""
+msgstr "Aktivering av din konto er fullført!"
 
 #: cms/templates/activation_complete.html
 msgid ""
 "Thank you for activating your account. You may now sign in and start using "
 "edX Studio to author courses."
 msgstr ""
+"Takk for at aktiverte kontoen din. Du kan nå logge inn for å starte å bruke "
+"edX Studio og lage dine egne kurs."
 
 #: cms/templates/activation_invalid.html
 msgid "Your account activation is invalid"
-msgstr ""
+msgstr "Aktivering av din konto er ikke godkjent"
 
 #: cms/templates/activation_invalid.html
 msgid ""
@@ -11431,38 +11572,42 @@ msgid ""
 "the URL you went to was correct &mdash; e-mail programs will sometimes split"
 " it into two lines."
 msgstr ""
+"Beklager aktivering var ikke mulig. Sjekk om URL gikk til var riktig &mdash;"
+" noen epost program kan dele linker over to linjer."
 
 #: cms/templates/activation_invalid.html
 msgid ""
 "If you still have issues, contact edX Support. In the meatime, you can also "
 "return to"
 msgstr ""
+"Om du fortsatt har problemer kontakt edX support. I mellomtiden kan du gå "
+"tilbake til"
 
 #: cms/templates/activation_invalid.html
 msgid "Contact edX Support"
-msgstr ""
+msgstr "Kontakt edX support"
 
 #: cms/templates/asset_index.html cms/templates/asset_index.html
 #: cms/templates/widgets/header.html
 msgid "Files &amp; Uploads"
-msgstr ""
+msgstr "Filer &amp;  opplastet"
 
 #: cms/templates/asset_index.html cms/templates/course_info.html
 #: cms/templates/edit-tabs.html cms/templates/overview.html
 #: cms/templates/textbooks.html cms/templates/widgets/header.html
 msgid "Content"
-msgstr ""
+msgstr "Innhold"
 
 #: cms/templates/asset_index.html cms/templates/container.html
 #: cms/templates/course_info.html cms/templates/edit-tabs.html
 #: cms/templates/index.html cms/templates/manage_users.html
 #: cms/templates/overview.html cms/templates/textbooks.html
 msgid "Page Actions"
-msgstr ""
+msgstr "Side "
 
 #: cms/templates/asset_index.html cms/templates/asset_index.html
 msgid "Upload New File"
-msgstr ""
+msgstr "Last opp ny fil"
 
 #: cms/templates/asset_index.html
 msgid "Loading&hellip;"
@@ -11470,7 +11615,7 @@ msgstr ""
 
 #: cms/templates/asset_index.html
 msgid "What files are listed here?"
-msgstr ""
+msgstr "Hvilke filer står oppført her?"
 
 #: cms/templates/asset_index.html
 msgid ""
@@ -11478,6 +11623,10 @@ msgid ""
 "the course appear in this list. These files include your course image, "
 "textbook chapters, and files that appear on your Course Handouts sidebar."
 msgstr ""
+"I tillegg til de filene du laster opp til denne siden, vil alle filer som du"
+" legger til i dette kurset vises i denne listen. Disse filene inkluderer "
+"ditt kurs bilde, kapitler fra tekstbok, og filer som vises i ditt Kurs "
+"Støtteark sidepanel."
 
 #: cms/templates/asset_index.html
 msgid "File URLs"
@@ -11499,7 +11648,7 @@ msgstr ""
 #: cms/templates/asset_index.html cms/templates/container.html
 #: cms/templates/overview.html cms/templates/settings_graders.html
 msgid "What can I do on this page?"
-msgstr ""
+msgstr "Hva kan jeg gjøre på denne siden? "
 
 #: cms/templates/asset_index.html
 msgid ""
@@ -11510,45 +11659,49 @@ msgstr ""
 
 #: cms/templates/asset_index.html
 msgid "Choose File"
-msgstr ""
+msgstr "Velg en fil"
 
 #: cms/templates/asset_index.html
 msgid "Your file has been deleted."
-msgstr ""
+msgstr "Din fil er slettet."
 
 #: cms/templates/asset_index.html
 msgid "close alert"
-msgstr ""
+msgstr "lukk varsling"
 
 #: cms/templates/checklists.html cms/templates/checklists.html
 msgid "Course Checklists"
-msgstr ""
+msgstr "Kurs Sjekklister"
 
 #: cms/templates/checklists.html cms/templates/export.html
 #: cms/templates/export_git.html cms/templates/import.html
 #: cms/templates/widgets/header.html
 msgid "Tools"
-msgstr ""
+msgstr "Verktøy"
 
 #: cms/templates/checklists.html
 msgid "Current Checklists"
-msgstr ""
+msgstr "Nåværende sjekklister"
 
 #: cms/templates/checklists.html
 msgid "What are course checklists?"
-msgstr ""
+msgstr "Hva er kurs sjekklister?"
 
 #: cms/templates/checklists.html
 msgid ""
 "Course checklists are tools to help you understand and keep track of all the"
 " steps necessary to get your course ready for students."
 msgstr ""
+"Kurs sjekklister er verktøy som hjelper deg å forstå og holde øye med alle "
+"de stegene som er nødvendige for å få kurset ditt klart for studenter. "
 
 #: cms/templates/checklists.html
 msgid ""
 "Any changes you make to these checklists are saved automatically and are "
 "immediately visible to other course team members."
 msgstr ""
+"Endringer du gjør til disse sjekk listene blir automatisk lagret, og blir "
+"synlige for andre kurs team medlemmer med en gang. "
 
 #: cms/templates/checklists.html
 msgid "Studio checklists"
@@ -11586,7 +11739,7 @@ msgstr ""
 
 #: cms/templates/container.html
 msgid "Published"
-msgstr ""
+msgstr "Utgitt"
 
 #: cms/templates/container.html
 msgid ""
@@ -11596,7 +11749,7 @@ msgstr ""
 
 #: cms/templates/container.html
 msgid "Draft"
-msgstr ""
+msgstr "Kladd"
 
 #: cms/templates/container.html
 msgid ""
@@ -11623,7 +11776,7 @@ msgstr "Kursoppdateringer"
 
 #: cms/templates/course_info.html
 msgid "New Update"
-msgstr ""
+msgstr "Ny Oppdatering"
 
 #: cms/templates/course_info.html
 msgid ""
@@ -11641,7 +11794,7 @@ msgstr ""
 
 #: cms/templates/edit-tabs.html
 msgid "New Page"
-msgstr ""
+msgstr "Ny side"
 
 #: cms/templates/edit-tabs.html cms/templates/edit_subsection.html
 #: cms/templates/index.html cms/templates/overview.html
@@ -11710,11 +11863,11 @@ msgstr ""
 
 #: cms/templates/edit-tabs.html
 msgid "See an example"
-msgstr ""
+msgstr "Se et eksempel"
 
 #: cms/templates/edit-tabs.html
 msgid "Pages in Your Course"
-msgstr ""
+msgstr "Sider i Ditt Kurs"
 
 #: cms/templates/edit-tabs.html
 msgid "Preview of Pages in your course"
@@ -11763,7 +11916,7 @@ msgstr ""
 
 #: cms/templates/edit_subsection.html
 msgid "UTC"
-msgstr ""
+msgstr "UTC"
 
 #: cms/templates/edit_subsection.html
 msgid ""
@@ -11895,7 +12048,7 @@ msgstr ""
 
 #: cms/templates/export.html
 msgid "User Data"
-msgstr ""
+msgstr "Bruker Informasjon"
 
 #: cms/templates/export.html
 msgid "Course Team Data"
@@ -11996,11 +12149,11 @@ msgstr ""
 
 #: cms/templates/howitworks.html
 msgid "Welcome"
-msgstr ""
+msgstr "Velkommen"
 
 #: cms/templates/howitworks.html
 msgid "Welcome to"
-msgstr ""
+msgstr "Velkommen til"
 
 #: cms/templates/howitworks.html
 msgid ""
@@ -12080,7 +12233,7 @@ msgstr ""
 
 #: cms/templates/howitworks.html
 msgid "Work Visually, Organize Quickly"
-msgstr ""
+msgstr "Jobb visuelt, organiser raskt"
 
 #: cms/templates/howitworks.html
 msgid ""
@@ -12199,7 +12352,7 @@ msgstr ""
 
 #: cms/templates/import.html cms/templates/import.html
 msgid "Course Import"
-msgstr ""
+msgstr "Kurs Import"
 
 #: cms/templates/import.html
 msgid ""
@@ -12208,6 +12361,10 @@ msgid ""
 "cannot undo a course import{em_end}. We recommend that you first export the "
 "current course, so you have a backup copy of it."
 msgstr ""
+"Vær sikker på at du vil importere et kurs før du fortsetter. Innholdet i det"
+" importerte kurset erstatter alt innhold i dette kurset. {em_start} Du kan "
+"ikke angre en kurs importering {em_end}. Vi anbefaler at du først "
+"eksporterer nåværende kurs slik at du har en sikkerhetskopi av det. "
 
 #. Translators: ".tar.gz" is a file extension, and files with that extension
 #. are called "gzipped tar files": these terms should not be translated
@@ -12238,7 +12395,7 @@ msgstr ""
 
 #: cms/templates/import.html
 msgid "File Chosen:"
-msgstr ""
+msgstr "Valgt Fil:"
 
 #: cms/templates/import.html
 msgid "Replace my course with the one above"
@@ -12631,10 +12788,6 @@ msgstr ""
 msgid "Required Information to Sign In to edX Studio"
 msgstr ""
 
-#: cms/templates/login.html cms/templates/register.html
-msgid "Email Address"
-msgstr ""
-
 #: cms/templates/login.html
 msgid "Studio Support"
 msgstr ""
@@ -12802,7 +12955,7 @@ msgstr ""
 
 #: cms/templates/overview.html
 msgid "Collapse All Sections"
-msgstr ""
+msgstr "Kollaps alle seksjoner"
 
 #: cms/templates/overview.html
 msgid "New Section"
@@ -12818,11 +12971,11 @@ msgstr ""
 
 #: cms/templates/overview.html
 msgid "Release date:"
-msgstr ""
+msgstr "Releasedato:"
 
 #: cms/templates/overview.html
 msgid "Edit section release date"
-msgstr ""
+msgstr "Rediger seksjonens releasedato"
 
 #: cms/templates/overview.html
 msgid "Delete section"
@@ -13183,7 +13336,7 @@ msgstr ""
 
 #: cms/templates/settings_advanced.html
 msgid "Your policy changes have been saved."
-msgstr ""
+msgstr "Dine endringer på regler har ikke blitt lagret."
 
 #: cms/templates/settings_advanced.html
 msgid "There was an error saving your information. Please see below."
@@ -13305,7 +13458,7 @@ msgstr ""
 
 #: cms/templates/textbooks.html
 msgid "New Textbook"
-msgstr ""
+msgstr "Ny lærebok"
 
 #: cms/templates/textbooks.html
 msgid "Why should I break my textbook into chapters?"
@@ -13321,7 +13474,7 @@ msgstr ""
 
 #: cms/templates/textbooks.html
 msgid "What if my book isn't divided into chapters?"
-msgstr ""
+msgstr "Hva om boken min ikke er inndelt i kapitler?"
 
 #: cms/templates/textbooks.html
 msgid ""
@@ -13329,6 +13482,9 @@ msgid ""
 " text as a single chapter and enter a name of your choice in the Chapter "
 "Name field."
 msgstr ""
+"Om læreboken din ikke har individuelle kapitler kan du laste opp hele "
+"teksten som et enkelt kapittel og angi et selvvalgt navn i Kapittel Navn "
+"feltet."
 
 #: cms/templates/textbooks.html
 msgid "Learn More"
@@ -13348,7 +13504,7 @@ msgstr ""
 
 #: cms/templates/unit.html
 msgid "View the Live Version"
-msgstr ""
+msgstr "Se Live versjonen"
 
 #: cms/templates/unit.html
 msgid "Unit Settings"
@@ -13364,7 +13520,7 @@ msgstr ""
 
 #: cms/templates/unit.html
 msgid "Private"
-msgstr ""
+msgstr "Privat"
 
 #: cms/templates/unit.html
 msgid ""
@@ -13392,7 +13548,7 @@ msgstr ""
 
 #: cms/templates/unit.html
 msgid "Delete Draft"
-msgstr ""
+msgstr "Slett kladd"
 
 #: cms/templates/unit.html
 msgid "Unit Location"
@@ -13495,15 +13651,15 @@ msgstr ""
 
 #: cms/templates/widgets/header.html
 msgid "Checklists"
-msgstr ""
+msgstr "Sjekklister"
 
 #: cms/templates/widgets/header.html
 msgid "Import"
-msgstr ""
+msgstr "Import"
 
 #: cms/templates/widgets/header.html
 msgid "Export"
-msgstr ""
+msgstr "Eksport"
 
 #: cms/templates/widgets/header.html
 msgid "Help &amp; Account Navigation"
@@ -13630,7 +13786,7 @@ msgstr ""
 
 #: cms/templates/widgets/tabs-aggregator.html
 msgid "name"
-msgstr ""
+msgstr "navn"
 
 #: cms/templates/widgets/units.html
 msgid "Delete this unit"

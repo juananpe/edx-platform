@@ -42,7 +42,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2014-06-12 12:24-0400\n"
+"POT-Creation-Date: 2014-06-18 08:33-0400\n"
 "PO-Revision-Date: 2014-06-12 11:44+0000\n"
 "Last-Translator: zolboo0411 <zolboo0411@yahoo.com>\n"
 "Language-Team: Mongolian (http://www.transifex.com/projects/p/edx-platform/language/mn/)\n"
@@ -363,15 +363,25 @@ msgstr ""
 
 #: common/djangoapps/student/views.py
 msgid ""
-"You are re-using a password that you have used recently. You must have {0} "
-"distinct password(s) before reusing a previous password."
-msgstr ""
+"You are re-using a password that you have used recently. You must have {num}"
+" distinct password before reusing a previous password."
+msgid_plural ""
+"You are re-using a password that you have used recently. You must have {num}"
+" distinct passwords before reusing a previous password."
+msgstr[0] ""
+msgstr[1] ""
 
+#. Translators: If you need to use a variable number instead of the number
+#. "one", use {num} in its place.
 #: common/djangoapps/student/views.py
 msgid ""
-"You are resetting passwords too frequently. Due to security policies, {0} "
-"day(s) must elapse between password resets"
-msgstr ""
+"You are resetting passwords too frequently. Due to security policies, one "
+"day must elapse between password resets"
+msgid_plural ""
+"You are resetting passwords too frequently. Due to security policies, {num} "
+"days must elapse between password resets"
+msgstr[0] ""
+msgstr[1] ""
 
 #: common/djangoapps/student/views.py
 msgid "Password reset unsuccessful"
@@ -848,8 +858,8 @@ msgstr ""
 
 #: common/lib/capa/capa/inputtypes.py
 msgid ""
-"Your file(s) have been submitted. As soon as your submission is graded, this"
-" message will be replaced with the grader's feedback."
+"Your files have been submitted. As soon as your submission is graded, this "
+"message will be replaced with the grader's feedback."
 msgstr ""
 
 #: common/lib/capa/capa/inputtypes.py
@@ -866,6 +876,26 @@ msgstr ""
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "No response from Xqueue within {xqueue_timeout} seconds. Aborted."
+msgstr ""
+
+#: common/lib/capa/capa/inputtypes.py
+msgid "Cannot connect to the queue"
+msgstr ""
+
+#: common/lib/capa/capa/inputtypes.py common/lib/capa/capa/inputtypes.py
+msgid "No formula specified."
+msgstr ""
+
+#: common/lib/capa/capa/inputtypes.py
+msgid "Couldn't parse formula: {error_msg}"
+msgstr ""
+
+#: common/lib/capa/capa/inputtypes.py common/lib/capa/capa/inputtypes.py
+msgid "Error while rendering preview"
+msgstr ""
+
+#: common/lib/capa/capa/inputtypes.py
+msgid "Sorry, couldn't parse formula"
 msgstr ""
 
 #: common/lib/capa/capa/inputtypes.py
@@ -959,7 +989,7 @@ msgstr ""
 #: common/lib/capa/capa/responsetypes.py
 #: common/templates/course_modes/choose.html
 msgid "or"
-msgstr ""
+msgstr "эсвэл"
 
 #: common/lib/capa/capa/responsetypes.py
 msgid "error getting student answer from {student_answers}"
@@ -1773,7 +1803,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/html_module.py
 msgid "Editor"
-msgstr ""
+msgstr "Өөрчлөгч"
 
 #: common/lib/xmodule/xmodule/html_module.py
 msgid "Visual"
@@ -2111,7 +2141,7 @@ msgstr ""
 #: common/lib/xmodule/xmodule/tabs.py
 #: lms/templates/peer_grading/peer_grading.html
 msgid "Progress"
-msgstr ""
+msgstr "Явц"
 
 #. Translators: "Wiki" is the name of the course's wiki page
 #: common/lib/xmodule/xmodule/tabs.py lms/djangoapps/course_wiki/views.py
@@ -2703,7 +2733,7 @@ msgstr ""
 #: lms/templates/instructor/instructor_dashboard_2/metrics.html
 #: lms/templates/open_ended_problems/open_ended_flagged_problems.html
 msgid "Name"
-msgstr ""
+msgstr "Нэр"
 
 #: lms/djangoapps/class_dashboard/dashboard_data.py
 #: lms/djangoapps/class_dashboard/dashboard_data.py
@@ -2841,6 +2871,41 @@ msgstr ""
 #. doesn't exist, or there is a problem changing to it.
 #: lms/djangoapps/dashboard/git_import.py
 msgid "Unable to switch to specified branch. Please check your branch name."
+msgstr ""
+
+#: lms/djangoapps/dashboard/support.py cms/templates/login.html
+#: cms/templates/register.html
+msgid "Email Address"
+msgstr ""
+
+#: lms/djangoapps/dashboard/support.py
+#: lms/templates/sysadmin_dashboard_gitlogs.html
+#: lms/templates/sysadmin_dashboard_gitlogs.html
+msgid "Course ID"
+msgstr ""
+
+#: lms/djangoapps/dashboard/support.py
+msgid "User not found"
+msgstr ""
+
+#: lms/djangoapps/dashboard/support.py
+msgid "Invalid course id"
+msgstr ""
+
+#: lms/djangoapps/dashboard/support.py
+msgid "Course {course_id} not past the refund window."
+msgstr ""
+
+#: lms/djangoapps/dashboard/support.py
+msgid "No order found for {user} in course {course_id}"
+msgstr ""
+
+#: lms/djangoapps/dashboard/support.py
+msgid "Unenrolled {user} from {course_id}"
+msgstr ""
+
+#: lms/djangoapps/dashboard/support.py
+msgid "Refunded {cost} for order id {order_id}"
 msgstr ""
 
 #: lms/djangoapps/dashboard/sysadmin.py
@@ -2997,6 +3062,8 @@ msgstr ""
 msgid "Directory/ID"
 msgstr ""
 
+#. Translators: "Git Commit" is a computer command; see
+#. http://gitref.org/basic/#commit
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Git Commit"
 msgstr ""
@@ -3527,7 +3594,7 @@ msgstr ""
 #: lms/djangoapps/instructor_task/tasks.py
 #: lms/templates/wiki/plugins/attachments/index.html wiki/models/article.py
 msgid "deleted"
-msgstr ""
+msgstr "Устсан"
 
 #. Translators: This is a past-tense verb that is inserted into task progress
 #. messages as {action}.
@@ -3872,7 +3939,7 @@ msgstr ""
 #: lms/templates/shoppingcart/verified_cert_receipt.html
 #: wiki/plugins/attachments/forms.py
 msgid "Description"
-msgstr ""
+msgstr "Тодорхойлолт"
 
 #: lms/djangoapps/shoppingcart/reports.py
 msgid "Comments"
@@ -4300,6 +4367,51 @@ msgstr ""
 #: lms/templates/main_django.html cms/templates/base.html
 #: lms/templates/main.html
 msgid "Skip to this view's content"
+msgstr "Агуулга харахыг алгасах"
+
+#: lms/templates/dashboard/_dashboard_refund.html
+#: lms/templates/dashboard/support.html
+msgid "Manual Refund"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "About to refund this order:"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "Order Id:"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "Enrollment:"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "enrolled"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "unenrolled"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "Cost:"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "CertificateItem Status:"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "Order Status:"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "Fulfilled Time:"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "Refund Request Time:"
 msgstr ""
 
 #: lms/templates/registration/password_reset_complete.html
@@ -4481,7 +4593,7 @@ msgstr ""
 #: lms/templates/discussion/_underscore_templates.html
 #: lms/templates/discussion/mustache/_inline_thread_show.mustache
 msgid "Delete"
-msgstr ""
+msgstr "Устгах"
 
 #: lms/templates/wiki/delete.html
 msgid "You cannot delete a root article."
@@ -4521,7 +4633,7 @@ msgstr ""
 #: lms/templates/discussion/mustache/_inline_thread_show.mustache
 #: lms/templates/wiki/includes/article_menu.html
 msgid "Edit"
-msgstr ""
+msgstr "Засварлах"
 
 #: lms/templates/wiki/edit.html lms/templates/wiki/edit.html.py
 msgid "Save changes"
@@ -4788,7 +4900,7 @@ msgstr ""
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "Upload File"
-msgstr ""
+msgstr "Файлаа хуулах"
 
 #: lms/templates/wiki/plugins/attachments/index.html
 msgid "Upload file"
@@ -4953,7 +5065,6 @@ msgid "Video"
 msgstr ""
 
 #: cms/djangoapps/contentstore/views/component.py
-#: cms/djangoapps/contentstore/views/component.py
 msgid "Blank"
 msgstr ""
 
@@ -5080,16 +5191,16 @@ msgstr ""
 #: cms/templates/404.html cms/templates/error.html
 #: lms/templates/static_templates/404.html
 msgid "Page Not Found"
-msgstr ""
+msgstr "Хуудас олдохгүй байна"
 
 #: cms/templates/404.html lms/templates/static_templates/404.html
 msgid "Page not found"
-msgstr ""
+msgstr "Хуудас олдохгүй байна"
 
 #: cms/templates/asset_index.html lms/templates/courseware/courseware.html
 #: lms/templates/verify_student/_modal_editname.html
 msgid "close"
-msgstr ""
+msgstr "Хаах"
 
 #: cms/templates/container.html
 #: lms/templates/courseware/instructor_dashboard.html
@@ -5103,16 +5214,16 @@ msgstr ""
 #: cms/templates/studio_xblock_wrapper.html
 #: lms/templates/wiki/includes/article_menu.html
 msgid "View"
-msgstr ""
+msgstr "Харах"
 
 #: cms/templates/html_error.html lms/templates/module-error.html
 msgid "Error:"
-msgstr ""
+msgstr "Алдаа:"
 
 #: cms/templates/index.html cms/templates/settings.html
 #: lms/templates/courseware/course_about.html
 msgid "Course Number"
-msgstr ""
+msgstr "Хуудасны дугаар"
 
 #: cms/templates/index.html cms/templates/manage_users.html
 #: cms/templates/overview.html cms/templates/overview.html
@@ -5125,17 +5236,17 @@ msgstr ""
 #: lms/templates/discussion/mustache/_inline_discussion_cohorted.mustache
 #: lms/templates/verify_student/face_upload.html
 msgid "Cancel"
-msgstr ""
+msgstr "Болих"
 
 #: cms/templates/index.html
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Organization:"
-msgstr ""
+msgstr "Байгууллага:"
 
 #: cms/templates/index.html
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
 msgid "Course Number:"
-msgstr ""
+msgstr "Хичээлийн дугаар:"
 
 #: cms/templates/index.html
 #: lms/templates/dashboard/_dashboard_status_verification.html
@@ -5160,7 +5271,7 @@ msgstr ""
 #: cms/templates/widgets/header.html
 #: lms/templates/wiki/includes/article_menu.html
 msgid "Settings"
-msgstr ""
+msgstr "Тохиргоо"
 
 #: cms/templates/manage_users.html
 #: lms/templates/courseware/instructor_dashboard.html
@@ -5174,7 +5285,7 @@ msgstr ""
 #: lms/templates/combinedopenended/selfassessment/self_assessment_prompt.html
 #: lms/templates/verify_student/face_upload.html
 msgid "Save"
-msgstr ""
+msgstr "Хадгалах"
 
 #: cms/templates/register.html cms/templates/widgets/header.html
 #: lms/templates/index.html
@@ -5263,7 +5374,7 @@ msgid "):"
 msgstr ""
 
 #: common/templates/course_modes/choose.html
-msgid "Why do I have to pay? What if I don't meet all the requirements?"
+msgid "Why do I have to pay? What if I want a free honor code certificate?"
 msgstr ""
 
 #: common/templates/course_modes/choose.html
@@ -5296,25 +5407,18 @@ msgstr ""
 #: common/templates/course_modes/choose.html
 msgid ""
 "If you can't afford the minimum fee or don't meet the requirements, you can "
-"audit the course or elect to pursue an honor code certificate at no cost. If"
-" you would like to pursue the honor code certificate, please check the honor"
-" code certificate box, tell us why you can't pursue the verified certificate"
-" below, and then click the 'Select Certificate' button to complete your "
-"registration."
-msgstr ""
-
-#: common/templates/course_modes/choose.html
-msgid "Select Honor Code Certificate"
-msgstr ""
-
-#: common/templates/course_modes/choose.html
-msgid "Explain your situation: "
+"audit the course or elect to pursue an honor code certificate at no cost."
 msgstr ""
 
 #: common/templates/course_modes/choose.html
 msgid ""
-"Please write a few sentences about why you'd like to opt out of the paid "
-"verified certificate to pursue the honor code certificate:"
+"If you would like to pursue the honor code certificate, please check the "
+"honor code certificate box and then click the 'Select Certificate' button to"
+" complete your registration."
+msgstr ""
+
+#: common/templates/course_modes/choose.html
+msgid "Select Honor Code Certificate"
 msgstr ""
 
 #: common/templates/course_modes/choose.html
@@ -5486,6 +5590,12 @@ msgstr ""
 
 #: lms/templates/dashboard.html
 msgid "Please verify your new email"
+msgstr ""
+
+#: lms/templates/dashboard.html
+msgid ""
+"You'll receive a confirmation in your inbox. Please click the link in the "
+"email to confirm the email change."
 msgstr ""
 
 #. Translators: this message is displayed when a user tries to link their
@@ -6791,11 +6901,6 @@ msgstr ""
 msgid "Date"
 msgstr ""
 
-#: lms/templates/sysadmin_dashboard_gitlogs.html
-#: lms/templates/sysadmin_dashboard_gitlogs.html
-msgid "Course ID"
-msgstr ""
-
 #. Translators: Git is a version-control system; see http://git-scm.com/about
 #: lms/templates/sysadmin_dashboard_gitlogs.html
 #: lms/templates/sysadmin_dashboard_gitlogs.html
@@ -7783,7 +7888,7 @@ msgstr ""
 
 #: lms/templates/courseware/instructor_dashboard.html
 msgid ""
-"Student distribution per country, all courses, Sep-12 to Oct-17, 1 server "
+"Student distribution per country, all courses, Sep 12 to Oct 17, 1 server "
 "(shown here as an example):"
 msgstr ""
 
@@ -8270,7 +8375,7 @@ msgstr ""
 #: lms/templates/discussion/mustache/_inline_discussion_cohorted.mustache
 #: wiki/forms.py wiki/forms.py wiki/forms.py
 msgid "Title"
-msgstr ""
+msgstr "Гарчиг"
 
 #: lms/templates/discussion/_inline_new_post.html
 #: lms/templates/discussion/_new_post.html
@@ -8308,7 +8413,7 @@ msgstr ""
 
 #: lms/templates/discussion/_similar_posts.html
 msgid "Hide"
-msgstr ""
+msgstr "Нуух"
 
 #: lms/templates/discussion/_thread_list_template.html
 msgid "Discussion Home"
@@ -11219,7 +11324,7 @@ msgstr ""
 
 #: cms/templates/asset_index.html
 msgid "Your file has been deleted."
-msgstr ""
+msgstr "Файл устгагдлаа."
 
 #: cms/templates/asset_index.html
 msgid "close alert"
@@ -12336,10 +12441,6 @@ msgstr ""
 msgid "Required Information to Sign In to edX Studio"
 msgstr ""
 
-#: cms/templates/login.html cms/templates/register.html
-msgid "Email Address"
-msgstr ""
-
 #: cms/templates/login.html
 msgid "Studio Support"
 msgstr ""
@@ -13355,23 +13456,23 @@ msgstr ""
 
 # empty
 msgid "This is a key string."
-msgstr ""
+msgstr "Энэ бол түлхүүр үг."
 
 #: wiki/admin.py wiki/models/article.py
 msgid "created"
-msgstr ""
+msgstr "үүсгэгдсэн"
 
 #: wiki/forms.py
 msgid "Only localhost... muahahaha"
-msgstr ""
+msgstr "Зөвхөн дотоод хост... хахахаха"
 
 #: wiki/forms.py
 msgid "Initial title of the article. May be overridden with revision titles."
-msgstr ""
+msgstr "Өгүүллэгийн эхний гарчиг. Өөрчлөлтийн гачигаар дарагдаж болно."
 
 #: wiki/forms.py
 msgid "Type in some contents"
-msgstr ""
+msgstr "зарим контентийн төрөл"
 
 #: wiki/forms.py
 msgid ""
@@ -13379,14 +13480,16 @@ msgid ""
 "can use more complex features like adding plugins, meta data, related "
 "articles etc..."
 msgstr ""
+"Энэ нь таны үүсгэсэн сэдвийн тухайн үеийн контентууд ба үүсгэсэний дараа "
+"илүү зүйлүүдийг нэмж болно."
 
 #: wiki/forms.py wiki/forms.py
 msgid "Contents"
-msgstr ""
+msgstr "Контентууд"
 
 #: wiki/forms.py wiki/forms.py
 msgid "Summary"
-msgstr ""
+msgstr "Хураангуй"
 
 #: wiki/forms.py
 msgid ""
@@ -13402,11 +13505,11 @@ msgstr ""
 
 #: wiki/forms.py
 msgid "No changes made. Nothing to save."
-msgstr ""
+msgstr "Өөрчлөлт хийгдээгүй байна. Хадгалах шаардлагагүй байна."
 
 #: wiki/forms.py
 msgid "Select an option"
-msgstr ""
+msgstr "Сонголтоо хийнэ үү"
 
 #: wiki/forms.py
 msgid "Slug"
@@ -13437,7 +13540,7 @@ msgstr ""
 
 #: wiki/forms.py
 msgid "Yes, I am sure"
-msgstr ""
+msgstr "Тийм"
 
 #: wiki/forms.py
 msgid "Purge"
@@ -13473,7 +13576,7 @@ msgstr ""
 
 #: wiki/forms.py
 msgid "Owner"
-msgstr ""
+msgstr "Эзэмшигч"
 
 #: wiki/forms.py
 msgid "Enter the username of the owner."
@@ -13481,7 +13584,7 @@ msgstr ""
 
 #: wiki/forms.py
 msgid "(none)"
-msgstr ""
+msgstr "(хоосон)"
 
 #: wiki/forms.py
 msgid "Inherit permissions"
@@ -13503,7 +13606,7 @@ msgstr ""
 
 #: wiki/forms.py
 msgid "No user with that username"
-msgstr ""
+msgstr "Ийм хэрэглэгчийн нэртэй хэрэглэгч байхгүй байна."
 
 #: wiki/forms.py
 msgid "Article locked for editing"
@@ -13515,7 +13618,7 @@ msgstr ""
 
 #: wiki/forms.py
 msgid "Filter..."
-msgstr ""
+msgstr "Шүүлт..."
 
 #: wiki/core/plugins/base.py
 msgid "Settings for plugin"
@@ -13524,7 +13627,7 @@ msgstr ""
 #: wiki/models/article.py wiki/models/pluginbase.py
 #: wiki/plugins/attachments/models.py
 msgid "current revision"
-msgstr ""
+msgstr "одоогийн засвар"
 
 #: wiki/models/article.py
 msgid ""
@@ -13534,15 +13637,15 @@ msgstr ""
 
 #: wiki/models/article.py
 msgid "modified"
-msgstr ""
+msgstr "шинэчлэгдсэн"
 
 #: wiki/models/article.py
 msgid "Article properties last modified"
-msgstr ""
+msgstr "Cүүлд шинэчлэгдсэн сэдэв"
 
 #: wiki/models/article.py
 msgid "owner"
-msgstr ""
+msgstr "эзэмшигч"
 
 #: wiki/models/article.py
 msgid ""
@@ -13552,7 +13655,7 @@ msgstr ""
 
 #: wiki/models/article.py
 msgid "group"
-msgstr ""
+msgstr "бүлэг"
 
 #: wiki/models/article.py
 msgid ""
@@ -13602,15 +13705,15 @@ msgstr ""
 
 #: wiki/models/article.py
 msgid "IP address"
-msgstr ""
+msgstr "IP хаяг"
 
 #: wiki/models/article.py
 msgid "user"
-msgstr ""
+msgstr "Хэрэглэгч"
 
 #: wiki/models/article.py
 msgid "locked"
-msgstr ""
+msgstr "Түгжээтэй"
 
 #: wiki/models/article.py wiki/models/pluginbase.py
 msgid "article"
@@ -13658,15 +13761,15 @@ msgstr ""
 
 #: wiki/models/urlpath.py
 msgid "(root)"
-msgstr ""
+msgstr "(root)"
 
 #: wiki/models/urlpath.py
 msgid "URL path"
-msgstr ""
+msgstr "URL зам"
 
 #: wiki/models/urlpath.py
 msgid "URL paths"
-msgstr ""
+msgstr "URL замууд"
 
 #: wiki/models/urlpath.py
 msgid "Sorry but you cannot have a root article with a slug."
@@ -13724,7 +13827,7 @@ msgstr ""
 
 #: wiki/plugins/attachments/models.py
 msgid "file"
-msgstr ""
+msgstr "Файл"
 
 #: wiki/plugins/attachments/models.py
 msgid "attachment revision"
@@ -13802,7 +13905,7 @@ msgstr ""
 
 #: wiki/plugins/images/models.py
 msgid "Image: %s"
-msgstr ""
+msgstr "Зураг:%s"
 
 #: wiki/plugins/images/models.py
 msgid "Current revision not set!!"
@@ -13946,7 +14049,7 @@ msgstr ""
 
 #: wiki/views/article.py
 msgid "New title"
-msgstr ""
+msgstr "Шинэ гарчиг"
 
 #: wiki/views/article.py
 msgid "Merge between Revision #%(r1)d and Revision #%(r2)d"

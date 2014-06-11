@@ -25,6 +25,7 @@
 # rcelaya <rcelaya@ula.ve>, 2014
 # Sarina Canelake <sarina@edx.org>, 2014
 # sebasco <sjduranh@gmail.com>, 2014
+# wjmendez <walterj.mendez@gmail.com>, 2014
 # #-#-#-#-#  django-studio.po (edx-platform)  #-#-#-#-#
 # edX translation file.
 # Copyright (C) 2014 EdX
@@ -112,7 +113,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: edx-platform\n"
 "Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
-"POT-Creation-Date: 2014-06-12 12:24-0400\n"
+"POT-Creation-Date: 2014-06-18 08:33-0400\n"
 "PO-Revision-Date: 2014-03-01 15:39+0000\n"
 "Last-Translator: Cristian Salamea <ovnicraft@gmail.com>\n"
 "Language-Team: Spanish (Latin America) (http://www.transifex.com/projects/p/edx-platform/language/es_419/)\n"
@@ -451,21 +452,25 @@ msgstr ""
 
 #: common/djangoapps/student/views.py
 msgid ""
-"You are re-using a password that you have used recently. You must have {0} "
-"distinct password(s) before reusing a previous password."
-msgstr ""
-"Está re utilizando una contraseña que ya había utilizado recientemente. Debe"
-" manejar al menos {0} contraseña(s) distintas antes de poder reutilizar una "
-"contraseña anterior."
+"You are re-using a password that you have used recently. You must have {num}"
+" distinct password before reusing a previous password."
+msgid_plural ""
+"You are re-using a password that you have used recently. You must have {num}"
+" distinct passwords before reusing a previous password."
+msgstr[0] ""
+msgstr[1] ""
 
+#. Translators: If you need to use a variable number instead of the number
+#. "one", use {num} in its place.
 #: common/djangoapps/student/views.py
 msgid ""
-"You are resetting passwords too frequently. Due to security policies, {0} "
-"day(s) must elapse between password resets"
-msgstr ""
-"Usted ha hecho cambios a la contraseña con demasiada frecuencia.  Por "
-"políticas de seguridad, debe esperar al menos {0} día(s) entre dos cambios "
-"de contraseña."
+"You are resetting passwords too frequently. Due to security policies, one "
+"day must elapse between password resets"
+msgid_plural ""
+"You are resetting passwords too frequently. Due to security policies, {num} "
+"days must elapse between password resets"
+msgstr[0] ""
+msgstr[1] ""
 
 #: common/djangoapps/student/views.py
 msgid "Password reset unsuccessful"
@@ -949,11 +954,9 @@ msgstr ""
 
 #: common/lib/capa/capa/inputtypes.py
 msgid ""
-"Your file(s) have been submitted. As soon as your submission is graded, this"
-" message will be replaced with the grader's feedback."
+"Your files have been submitted. As soon as your submission is graded, this "
+"message will be replaced with the grader's feedback."
 msgstr ""
-"Su(s) archivo(s) ha(n) sido enviado(s). Tan pronto su envío sea calificado, "
-"este mensaje será reemplazado por los comentarios del evaluador."
 
 #: common/lib/capa/capa/inputtypes.py
 msgid ""
@@ -976,6 +979,26 @@ msgid "No response from Xqueue within {xqueue_timeout} seconds. Aborted."
 msgstr ""
 "No se obtuvo respuesta de Xqueue en {xqueue_timeout} segundos. La operación "
 "se abortó."
+
+#: common/lib/capa/capa/inputtypes.py
+msgid "Cannot connect to the queue"
+msgstr ""
+
+#: common/lib/capa/capa/inputtypes.py common/lib/capa/capa/inputtypes.py
+msgid "No formula specified."
+msgstr ""
+
+#: common/lib/capa/capa/inputtypes.py
+msgid "Couldn't parse formula: {error_msg}"
+msgstr ""
+
+#: common/lib/capa/capa/inputtypes.py common/lib/capa/capa/inputtypes.py
+msgid "Error while rendering preview"
+msgstr ""
+
+#: common/lib/capa/capa/inputtypes.py
+msgid "Sorry, couldn't parse formula"
+msgstr ""
 
 #: common/lib/capa/capa/inputtypes.py
 msgid "{input_type}: unexpected tag {tag_name}"
@@ -2104,7 +2127,7 @@ msgstr ""
 #: common/lib/xmodule/xmodule/textannotation_module.py
 #: common/lib/xmodule/xmodule/videoannotation_module.py
 msgid "Mode for Annotation Tool"
-msgstr ""
+msgstr "Modo para Herramienta de anotación"
 
 #: common/lib/xmodule/xmodule/imageannotation_module.py
 #: common/lib/xmodule/xmodule/textannotation_module.py
@@ -2144,6 +2167,9 @@ msgid ""
 "Enter the URL of the external tool that this component launches. This "
 "setting is only used when Hide External Tool is set to False.<br />See "
 msgstr ""
+"Ingrese el URL de la herramienta externa que inicia este componente. Esta "
+"configuración es utilizada cuando la opción OCULTAR LA HERRAMIENTA EXTERNA  "
+"está en FALSO.<br />Ver"
 
 #: common/lib/xmodule/xmodule/lti_module.py
 msgid "Custom Parameters"
@@ -2154,6 +2180,9 @@ msgid ""
 "Add the key/value pair for any custom parameters, such as the page your "
 "e-book should open to or the background color for this component.<br />See "
 msgstr ""
+"Añada el par clave / valor para los parámetros personalizados, como la "
+"página de su libro electrónico debe abrir o el color de fondo para este "
+"componente. <br /> Ver"
 
 #: common/lib/xmodule/xmodule/lti_module.py
 msgid "Open in New Page"
@@ -2166,6 +2195,11 @@ msgid ""
 "in the current page. This setting is only used when Hide External Tool is "
 "set to False.  "
 msgstr ""
+"Seleccione Verdadero si desea que los estudiantes hagan clic en un vínculo "
+"que abre la herramienta de LTI en una nueva ventana. Seleccione Falso si "
+"desea que el contenido de LTI se abra en un iframe en la página actual. Esta"
+" opción sólo se utiliza cuando herramienta externa Hide se establece en "
+"False."
 
 #: common/lib/xmodule/xmodule/lti_module.py
 msgid "Scored"
@@ -2249,6 +2283,8 @@ msgid ""
 "The location of the problem being graded. Only used when \"Show Single "
 "Problem\" is True."
 msgstr ""
+"La ubicación del problema que está siendo evaluado. Utilizado únicamente "
+"cuando \"Mostrar Único Problema\" es Verdadero"
 
 #: common/lib/xmodule/xmodule/peer_grading_module.py
 msgid ""
@@ -2262,11 +2298,11 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/peer_grading_module.py
 msgid "Amount of grace to give on the due date."
-msgstr ""
+msgstr "Período de gracia de otorgar en las fechas de entrega."
 
 #: common/lib/xmodule/xmodule/peer_grading_module.py
 msgid "Student data for a given peer grading problem."
-msgstr ""
+msgstr "Data del estudiante para un problema específico evaluado entre pares"
 
 #: common/lib/xmodule/xmodule/peer_grading_module.py
 msgid "Peer Grading Interface"
@@ -2298,6 +2334,8 @@ msgid ""
 "This name is used for organizing your course content, but is not shown to "
 "students."
 msgstr ""
+"Este nombre sirve para organizar su contenido de curso, pero no se le "
+"muestra a los estudiantes."
 
 #: common/lib/xmodule/xmodule/split_test_module.py
 msgid "Content Experiment"
@@ -2318,7 +2356,7 @@ msgstr ""
 
 #: common/lib/xmodule/xmodule/split_test_module.py
 msgid "Group Configuration"
-msgstr ""
+msgstr "Configuración de Grupo"
 
 #: common/lib/xmodule/xmodule/split_test_module.py
 msgid "Which child module students in a particular group_id should see"
@@ -3165,6 +3203,41 @@ msgstr ""
 "No fue posible cambiar la la rama especificada. Por favor verifique el "
 "nombre de la misma."
 
+#: lms/djangoapps/dashboard/support.py cms/templates/login.html
+#: cms/templates/register.html
+msgid "Email Address"
+msgstr "Dirección de correo electrónico"
+
+#: lms/djangoapps/dashboard/support.py
+#: lms/templates/sysadmin_dashboard_gitlogs.html
+#: lms/templates/sysadmin_dashboard_gitlogs.html
+msgid "Course ID"
+msgstr "Id de Curso"
+
+#: lms/djangoapps/dashboard/support.py
+msgid "User not found"
+msgstr ""
+
+#: lms/djangoapps/dashboard/support.py
+msgid "Invalid course id"
+msgstr ""
+
+#: lms/djangoapps/dashboard/support.py
+msgid "Course {course_id} not past the refund window."
+msgstr ""
+
+#: lms/djangoapps/dashboard/support.py
+msgid "No order found for {user} in course {course_id}"
+msgstr ""
+
+#: lms/djangoapps/dashboard/support.py
+msgid "Unenrolled {user} from {course_id}"
+msgstr ""
+
+#: lms/djangoapps/dashboard/support.py
+msgid "Refunded {cost} for order id {order_id}"
+msgstr ""
+
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Failed in authenticating {0}, error {1}\n"
 msgstr "Fallo en la autenticación de {0}, error {1}\n"
@@ -3333,6 +3406,8 @@ msgstr "Nombre del curso"
 msgid "Directory/ID"
 msgstr "Directorio/ID"
 
+#. Translators: "Git Commit" is a computer command; see
+#. http://gitref.org/basic/#commit
 #: lms/djangoapps/dashboard/sysadmin.py
 msgid "Git Commit"
 msgstr "Git Commit"
@@ -4835,6 +4910,51 @@ msgstr ""
 msgid "Skip to this view's content"
 msgstr "Saltar a los contenidos de esta vista"
 
+#: lms/templates/dashboard/_dashboard_refund.html
+#: lms/templates/dashboard/support.html
+msgid "Manual Refund"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "About to refund this order:"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "Order Id:"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "Enrollment:"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "enrolled"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "unenrolled"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "Cost:"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "CertificateItem Status:"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "Order Status:"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "Fulfilled Time:"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_refund.html
+msgid "Refund Request Time:"
+msgstr ""
+
 #: lms/templates/registration/password_reset_complete.html
 #: lms/templates/registration/password_reset_complete.html
 msgid "Your Password Reset is Complete"
@@ -5559,7 +5679,6 @@ msgid "Video"
 msgstr "Video"
 
 #: cms/djangoapps/contentstore/views/component.py
-#: cms/djangoapps/contentstore/views/component.py
 msgid "Blank"
 msgstr "Sin responder"
 
@@ -5884,9 +6003,8 @@ msgid "):"
 msgstr "):"
 
 #: common/templates/course_modes/choose.html
-msgid "Why do I have to pay? What if I don't meet all the requirements?"
+msgid "Why do I have to pay? What if I want a free honor code certificate?"
 msgstr ""
-"¿Por que debo pagar? ¿Que sucede si no cumplo con todos los requisitos?"
 
 #: common/templates/course_modes/choose.html
 msgid "Why do I have to pay?"
@@ -5927,34 +6045,19 @@ msgstr "¿Que sucede si no puedo costear o no tengo el equipamento necesario?"
 #: common/templates/course_modes/choose.html
 msgid ""
 "If you can't afford the minimum fee or don't meet the requirements, you can "
-"audit the course or elect to pursue an honor code certificate at no cost. If"
-" you would like to pursue the honor code certificate, please check the honor"
-" code certificate box, tell us why you can't pursue the verified certificate"
-" below, and then click the 'Select Certificate' button to complete your "
-"registration."
+"audit the course or elect to pursue an honor code certificate at no cost."
 msgstr ""
-"Si no puede pagar el precio mínimo, o no cumple con los requisitos básicos, "
-"puede auditar el curso o seleccionar un certificado de código de honor sin "
-"ningún costo. Si desea elegir el certificado de código de honor, por favor "
-"marque la casilla correspondiente, indíquenos por que razón no puede elegir "
-"el certificado verificado y luego haga clic en 'Seleccionar certificado' "
-"para completar su registro."
+
+#: common/templates/course_modes/choose.html
+msgid ""
+"If you would like to pursue the honor code certificate, please check the "
+"honor code certificate box and then click the 'Select Certificate' button to"
+" complete your registration."
+msgstr ""
 
 #: common/templates/course_modes/choose.html
 msgid "Select Honor Code Certificate"
 msgstr "Seleccionar certificado de código de honor"
-
-#: common/templates/course_modes/choose.html
-msgid "Explain your situation: "
-msgstr "Explique su situación:"
-
-#: common/templates/course_modes/choose.html
-msgid ""
-"Please write a few sentences about why you'd like to opt out of the paid "
-"verified certificate to pursue the honor code certificate:"
-msgstr ""
-"Por favor escriba algunas razones por las cuales prefiere optar por el "
-"certificado de código de honor en lugar del certificado verificado pagado."
 
 #: common/templates/course_modes/choose.html
 msgid "Upgrade Your Registration"
@@ -6163,6 +6266,12 @@ msgstr "Ocurrió un error. Por favor intente nuevamente más tarde."
 #: lms/templates/dashboard.html
 msgid "Please verify your new email"
 msgstr "Por favor verifique su correo"
+
+#: lms/templates/dashboard.html
+msgid ""
+"You'll receive a confirmation in your inbox. Please click the link in the "
+"email to confirm the email change."
+msgstr ""
 
 #. Translators: this message is displayed when a user tries to link their
 #. account with a third-party authentication provider (for example, Google or
@@ -7579,11 +7688,6 @@ msgstr "Versión de la Plataforma"
 msgid "Date"
 msgstr "Fecha"
 
-#: lms/templates/sysadmin_dashboard_gitlogs.html
-#: lms/templates/sysadmin_dashboard_gitlogs.html
-msgid "Course ID"
-msgstr "Id de Curso"
-
 #. Translators: Git is a version-control system; see http://git-scm.com/about
 #: lms/templates/sysadmin_dashboard_gitlogs.html
 #: lms/templates/sysadmin_dashboard_gitlogs.html
@@ -8674,9 +8778,9 @@ msgstr "Número de estudiantes"
 
 #: lms/templates/courseware/instructor_dashboard.html
 msgid ""
-"Student distribution per country, all courses, Sep-12 to Oct-17, 1 server "
+"Student distribution per country, all courses, Sep 12 to Oct 17, 1 server "
 "(shown here as an example):"
-msgstr "Distribución de estudiantes por país para todos los cursos."
+msgstr ""
 
 #: lms/templates/courseware/instructor_dashboard.html
 #: lms/templates/instructor/instructor_dashboard_2/course_info.html
@@ -13916,10 +14020,6 @@ msgstr "¿No tiene una cuenta de Studio aún? regístrese!"
 #: cms/templates/login.html
 msgid "Required Information to Sign In to edX Studio"
 msgstr "Información requerida para iniciar sesión en edX Studio"
-
-#: cms/templates/login.html cms/templates/register.html
-msgid "Email Address"
-msgstr "Dirección de correo electrónico"
 
 #: cms/templates/login.html
 msgid "Studio Support"
