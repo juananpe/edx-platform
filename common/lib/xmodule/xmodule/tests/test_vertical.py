@@ -57,7 +57,7 @@ class VerticalModuleTestCase(BaseVerticalModuleTest):
         # Vertical shouldn't render children on the unit page
         context = {
             'runtime_type': 'studio',
-            'container_view': False,
+            'is_unit_page': True
         }
         html = self.module_system.render(self.vertical, 'student_view', context).content
         self.assertNotIn(self.test_html_1, html)
@@ -67,7 +67,7 @@ class VerticalModuleTestCase(BaseVerticalModuleTest):
         reorderable_items = set()
         context = {
             'runtime_type': 'studio',
-            'container_view': True,
+            'is_unit_page': False,
             'reorderable_items': reorderable_items,
         }
         html = self.module_system.render(self.vertical, 'student_view', context).content
