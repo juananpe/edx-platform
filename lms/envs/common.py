@@ -1366,12 +1366,6 @@ LINKEDIN_API = {
 # By default, don't use a file prefix
 ORA2_FILE_PREFIX = None
 
-# AI algorithm configuration
-ORA2_AI_ALGORITHMS = {
-    'fake': 'openassessment.assessment.worker.algorithm.FakeAIAlgorithm',
-    'ease': 'openassessment.assessment.worker.algorithm.EaseAIAlgorithm'
-}
-
 
 ##### ACCOUNT LOCKOUT DEFAULT PARAMETERS #####
 MAX_FAILED_LOGIN_ATTEMPTS_ALLOWED = 5
