@@ -10,11 +10,10 @@ def deprecated(deprecated, deprecated_by,  *args)
         sh("pip install -r requirements/edx/paver.txt")
 
         args.with_defaults(:harvest_args => nil)
-
         new_cmd = deprecated_by
 
-        if args.harvest_args?
-            new_cmd = "#{new_cmd} --cmd_args=#{harvest_args}"
+        if !args.harvest_args.nil?
+            new_cmd = "#{new_cmd} --extra_args='#{args.harvest_args}'"
         end
 
         puts("Task #{deprecated} has been deprecated. Use #{new_cmd} instead.".red)

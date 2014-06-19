@@ -18,7 +18,7 @@ class AcceptanceTest(TestSuite):
         self.report_dir = Env.REPORT_DIR / 'acceptance'
         self.fasttest = kwargs.get('fasttest', False)
         self.system = kwargs.get('system', None)
-        self.cmd_args = kwargs.get('cmd_args', '')
+        self.extra_args = kwargs.get('extra_args', '')
 
     def __enter__(self):
         super(AcceptanceTest, self).__enter__()
@@ -34,13 +34,14 @@ class AcceptanceTest(TestSuite):
 
         report_file = self.report_dir /  "{}.xml".format(self.system)
         report_args = "--with-xunit --xunit-file {}".format(report_file)
+
         cmd = ( 
             "./manage.py {system} --settings acceptance harvest --traceback "
-            "--debug-mode --verbosity={verbosity} {report_args} {extra_args}".format(
+            "--debug-mode --verbosity {verbosity} {report_args} {extra_args}".format(
                 system=self.system,
                 verbosity=self.verbosity,
                 report_args=report_args,
-                extra_args=self.cmd_args,
+                extra_args=self.extra_args,
             )
         )
 
