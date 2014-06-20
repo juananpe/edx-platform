@@ -458,6 +458,17 @@ class ChangeEnrollmentView(ModuleStoreTestCase):
         self.assertTrue(is_active)
         self.assertEqual(enrollment_mode, u'honor')
 
+    def test_cannot_enroll_if_already_enrolled(self):
+        """
+        Tests that a student will not be able to enroll through this view if
+        they are already enrolled in the course
+        """
+        CourseEnrollment.enroll(self.user, self.course.id)
+        self.assertTrue(CourseEnrollment.is_enrolled(self.user, self.course.id))
+        # now try to enroll that student
+        response = self.enroll_through_view(self.course)
+        self.assertEqual(response.status_code, 400)
+
     def test_change_to_honor_if_verified(self):
         """
         Tests that a student that is a currently enrolled verified student cannot
@@ -475,6 +486,9 @@ class ChangeEnrollmentView(ModuleStoreTestCase):
         self.assertEqual(enrollment_mode, u'verified')
 
     def test_change_to_honor_if_verified_not_active(self):
+        """
+        Tests that one can renroll for a course if one has already unenrolled
+        """
         # enroll student
         CourseEnrollment.enroll(self.user, self.course.id, mode=u'verified')
         # now unenroll student:

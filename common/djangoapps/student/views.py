@@ -613,12 +613,8 @@ def change_enrollment(request):
         if is_course_full:
             return HttpResponseBadRequest(_("Course is full"))
 
-        # check to see if user is currently enrolled in that course in a verified
-        # mode
-        enrollment_mode, is_active = CourseEnrollment.enrollment_mode_for_user(
-            user, course_id
-        )
-        if enrollment_mode == u'verified' and is_active:
+        # check to see if user is currently enrolled in that course
+        if CourseEnrollment.is_enrolled(user, course_id):
             return HttpResponseBadRequest(
                 _("Student is already enrolled in a verified mode")
             )
